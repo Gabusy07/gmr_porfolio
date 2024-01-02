@@ -1,0 +1,18 @@
+---
+
+interface UserInfo {
+	username: string;
+	useremail: string;
+}
+
+const { username, useremail} = Astro.props;
+
+---
+
+<header class="py=8 px=4 mx-auto max-w-xl lg:py-16 bg-white-500">
+    <div>
+        <p class="text-white-700">Bienvenido {username}</p>
+    </div>
+    
+</header>
+
