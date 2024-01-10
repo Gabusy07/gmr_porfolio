@@ -1,0 +1,14 @@
+---
+interface Props {
+  linkName: string;
+  href: string;
+}
+
+const { linkName, href} = Astro.props;
+---
+<div class="flex">
+  <slot class="mx-1" name="before"/>
+  <a class="mx-1" href={href}>{linkName}</a>
+  <slot class="mx-1" name="after"/>
+</div>
+   

@@ -1,6 +1,8 @@
 ---
+import ButtomCustom from "./ButtomCustom.astro";
+import NavLinkCustom from "./NavLinkCustom.astro";
 
-interface UserInfo {
+interface Props {
 	username: string;
 	useremail: string;
 }
@@ -9,10 +11,33 @@ const { username, useremail} = Astro.props;
 
 ---
 
-<header class="py=8 px=4 mx-auto max-w-xl lg:py-16 bg-white-500">
-    <div>
-        <p class="text-white-700">Bienvenido {username}</p>
+<header class="h-12 w-full bg-white">
+    <div class="flex items-center justify-between mx-4">
+        <nav class="flex space-x-4">
+            <NavLinkCustom linkName="hkgk" href="./about">
+                <Fragment slot="before">
+                    <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </Fragment>
+            </NavLinkCustom>
+            
+            <NavLinkCustom linkName="acerca de mi" href="./about">
+                <Fragment slot="before">
+                    <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </Fragment>
+            </NavLinkCustom>
+
+            <NavLinkCustom linkName="proyectos" href="./about">
+                <Fragment slot="before">
+                    <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </Fragment>
+            </NavLinkCustom>
+           
+        </nav>
+        <div >
+            <p class="text-white-700">Bienvenido {username}</p>
+        </div>
+       
     </div>
-    
+   
 </header>
 
