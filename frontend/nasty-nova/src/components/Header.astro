@@ -1,17 +1,11 @@
 ---
-import ButtomCustom from "./ButtomCustom.astro";
 import NavLinkCustom from "./NavLinkCustom.astro";
 
-interface Props {
-	username: string;
-	useremail: string;
-}
 
-const { username, useremail} = Astro.props;
-
+const { } = Astro.props;
 ---
 
-<header class="h-12 w-full bg-white">
+<header class="h-15 rounded w-full">
     <div class="flex items-center justify-between mx-4">
         <nav class="flex space-x-4">
             <NavLinkCustom linkName="hkgk" href="./about">
@@ -34,7 +28,11 @@ const { username, useremail} = Astro.props;
            
         </nav>
         <div >
-            <p class="text-white-700">Bienvenido {username}</p>
+            
+                <h1>Modo Claro/Oscuro</h1>
+                <button>Cambiar Modo</button>
+            
+            
         </div>
        
     </div>

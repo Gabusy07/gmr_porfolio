@@ -1,44 +1,69 @@
 ---
-import Header from '../components/Header.astro';
+import { ViewTransitions, fade } from "astro:transitions";
+import Header from "../components/Header.astro";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+
+let isDarkMode: boolean = false;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-16" />
-		<meta name=gmr-info" content="gmr-info" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<Header useremail="hvh" , username="gmr" />
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-16" />
+    <meta name='gmr-info"' content="gmr-info" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body
+    transition:animate={fade({ duration: "0.4s" })}
+    class:list={[
+      {
+        "bg-gray-900 text-white": isDarkMode,
+        "bg-gray-100 text-black": !isDarkMode,
+      },
+    ]}
+  >
+    <slot />
+  </body><script>
+    class AstroGreet extends HTMLElement {
+      constructor() {
+        super();
+
+        const buttons = document.querySelectorAll("button.alert");
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {});
+        });
+      }
+    }
+  </script>
+
+  <style is:global>
+    body {
+      transition: background-color 0.5s ease;
+      padding: 3rem;
+    }
+
+    html {
+      font-family: system-ui, sans-serif;
+      background-size: 224px;
+    }
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
 </html>
-<style is:global>
-	
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-		color-scheme: dark light;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
