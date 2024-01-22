@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions, fade } from "astro:transitions";
-import Header from "../components/Header.astro";
+import Header from "../components/header/Header.astro";
 interface Props {
   title: string;
 }
@@ -21,7 +21,7 @@ let isDarkMode: boolean = false;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body
+  <body id="body_layout"
     transition:animate={fade({ duration: "0.4s" })}
     class:list={[
       {
@@ -31,18 +31,8 @@ let isDarkMode: boolean = false;
     ]}
   >
     <slot />
-  </body><script>
-    class AstroGreet extends HTMLElement {
-      constructor() {
-        super();
-
-        const buttons = document.querySelectorAll("button.alert");
-        buttons.forEach((button) => {
-          button.addEventListener("click", () => {});
-        });
-      }
-    }
-  </script>
+    <script src="../components/header/header.ts"></script>
+  </body>
 
   <style is:global>
     body {
