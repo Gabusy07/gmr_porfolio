@@ -3,23 +3,29 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
-	backgroundColor:string
+	backgroundColor:string;
 }
 
-const { href, title, body, backgroundColor } = Astro.props;
+const { href, title, body, backgroundColor} = Astro.props;
 ---
+<div class={"border border-double border-gray-700 rounded "+backgroundColor+" w-full p-12 text-black"}>
+	<li>
+		<a href={href}>
+			<h2>
+				{title}
+				<span>&rarr;</span>
+			</h2>
+			<p>
+				{body}
+			</p>
+			<div class="h-[100%] w-[100%] mt-3">
+				<img src="" alt="imagen">
+			</div>
+		</a>
+	</li>
+</div>
+	
 
-<li class={"bg-" + backgroundColor}>
-	<a href={href}>
-		<p>{"bg-"+backgroundColor}</p>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
 <style>
+
 </style>

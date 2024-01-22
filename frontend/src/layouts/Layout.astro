@@ -23,12 +23,6 @@ let isDarkMode: boolean = false;
   </head>
   <body id="body_layout"
     transition:animate={fade({ duration: "0.4s" })}
-    class:list={[
-      {
-        "bg-gray-900 text-white": isDarkMode,
-        "bg-gray-100 text-black": !isDarkMode,
-      },
-    ]}
   >
     <slot />
     <script src="../components/header/header.ts"></script>
