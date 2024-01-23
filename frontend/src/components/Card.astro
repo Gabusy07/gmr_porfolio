@@ -1,31 +1,65 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
-	backgroundColor:string;
+  title: string;
+  body: string;
+  href: string;
+  backgroundColor: string;
+  imgRef: string;
+  owner: string;
 }
 
-const { href, title, body, backgroundColor} = Astro.props;
+const { href, title, body, backgroundColor, imgRef, owner } = Astro.props;
 ---
-<div class={"border border-double border-gray-700 rounded "+backgroundColor+" w-full p-12 text-black"}>
-	<li>
-		<a href={href}>
-			<h2>
-				{title}
-				<span>&rarr;</span>
-			</h2>
-			<p>
-				{body}
-			</p>
-			<div class="h-[100%] w-[100%] mt-3">
-				<img src="" alt="imagen">
-			</div>
-		</a>
-	</li>
+
+<div
+  class={"card-container border border-double border-gray-700 rounded " +
+    backgroundColor +
+    " w-full p-12 text-black"}
+>
+  <li>
+    <a href={href} class="relative">
+      <h2>
+        {title}
+        <span>&rarr;</span>
+      </h2>
+      <p>
+        {body}
+      </p>
+      <div class="h-[100%] w-[100%] mt-3 flex items-center justify-center">
+        <img src={imgRef} alt="imagen" class="w-[75%] h-[25%]" />
+      </div>
+      <div class="flex items-center justify-center mt-2">
+        <p class="text-sm">
+          por: <span class="text-blue-900 owner:hover:underline">{owner}</span>
+        </p>
+      </div>
+	  <div class="div-oculto mt-6">Contenido del div oculto.</div>
+    
+    </a>
+  </li>
 </div>
-	
 
 <style>
+  .card-container {
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
 
+  .card-container:hover {
+    transform: scale(1.025) translate(0%, 1%);
+    opacity: 0.75;
+  }
+
+  .owner:hover ~ .div-oculto {
+    display: block;
+  }
+
+  .div-oculto {
+	position: absolute;
+    display: none;
+	bottom: 2;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+  }
 </style>

@@ -7,11 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggleButton.addEventListener("click", () => {
     if (darkModeClasses.every(cls => body.classList.contains(cls))) {
-      lightModeClasses.forEach(cls => body.classList.add(cls));
+      setTimeout(()=>{
+        lightModeClasses.forEach(cls => body.classList.add(cls));
       darkModeClasses.forEach(cls => body.classList.remove(cls));
+
+      }, 50);
+      
     } else {
-      darkModeClasses.forEach(cls => body.classList.add(cls));
-      lightModeClasses.forEach(cls => body.classList.remove(cls));
+      setTimeout(()=>{
+        darkModeClasses.forEach(cls => body.classList.add(cls));
+        lightModeClasses.forEach(cls => body.classList.remove(cls));
+
+      }, 50);
+     
     }
   });
 });

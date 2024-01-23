@@ -19,30 +19,22 @@ import Onest from "../public/fonts\static/Onest-Black.ttf"
       />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
     </p>
-    <ul role="list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-1">
+    <ul role="list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
       <Card
-        href=""
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-        backgroundColor="bg-pink-200"
-      />
-      <Card
-        href=""
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-        backgroundColor="bg-yellow-200"
-      />
-      <Card
-        href=""
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-        backgroundColor="bg-blue-200"
+        href="https://github.com/No-Country/C9-G34"
+        title="Lumini"
+        body="Proyecto grupal de  red social"
+        backgroundColor="bg-gradient-to-r from-green-600 via-green-500 to-green-500"
+        imgRef="../public/noCountry-logo.png"
+        owner="noCountry"
       />
         <Card
-        href=""
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-        backgroundColor="bg-orange-200"
+        href="https://github.com/No-Country/s7-09-T-JavaReact"
+        title="TripMate"
+        body="Proyecto grupal de comunidad de viaje "
+        backgroundColor="bg-gradient-to-r from-yellow-500 via-yellow-500 to-yellow-400"
+        imgRef="../public/tripmate-logo.png"
+        owner="noCountry"
       />
      
     </ul>
@@ -54,7 +46,11 @@ import Onest from "../public/fonts\static/Onest-Black.ttf"
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap');
 
   :root{
-    color-scheme: light dark;
+    --color-violet : rgb(73 35 242);
+    --z-priority: z-index: 100;
+    --z-base: z-index: 10;
+    --z-lower: z-index: 1;
+    
   }
 
   html{
@@ -63,6 +59,7 @@ import Onest from "../public/fonts\static/Onest-Black.ttf"
 
   body{
     min-height: 100vh;
+    color-scheme: light dark;
   }
   main {
     margin: auto;
