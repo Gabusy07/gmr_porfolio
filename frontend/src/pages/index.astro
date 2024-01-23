@@ -1,15 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Header from "../components/header/Header.astro";
 import Onest from "../public/fonts\static/Onest-Black.ttf"
+import Github from "../icons/Github.astro";
 
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="header w-full md:w-1/2 lg:w-1/2 xl:w-full">
-  <Header/>
-</div>
   <main>
     <h1 class="text-red-500">
       Welcome <span class="text-gradient">Astro</span>
@@ -40,6 +37,8 @@ import Onest from "../public/fonts\static/Onest-Black.ttf"
     </ul>
   </main>
 </Layout>
+
+<Github></Github>
 
 <style>
 
