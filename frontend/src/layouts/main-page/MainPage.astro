@@ -1,13 +1,11 @@
 ---
 import { ViewTransitions, fade } from "astro:transitions";
-import Header from "../components/header/Header.astro";
+import Header from "../../components/header/Header.astro";
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-
-let isDarkMode: boolean = false;
 ---
 
 <!doctype html>
@@ -24,11 +22,11 @@ let isDarkMode: boolean = false;
   <div class="header w-full md:w-1/2 lg:w-1/2 xl:w-full">
     <Header/>
   </div>
-  <body id="body_layout"
+  <body
     transition:animate={fade({ duration: "0.4s" })}
   >
     <slot />
-    <script src="../components/header/header.ts"></script>
+    <script src="./darklightmode-control.ts"></script>
   </body>
 
   <style is:global>

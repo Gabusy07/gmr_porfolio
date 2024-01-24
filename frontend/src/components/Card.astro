@@ -18,11 +18,10 @@ const { href, title, body, backgroundColor, imgRef, owner } = Astro.props;
 >
   <li>
     <a href={href} class="relative">
-      <h2>
+      <h2 class="text-xxl">
         {title}
-        <span>&rarr;</span>
       </h2>
-      <p>
+      <p class="text-base">
         {body}
       </p>
       <div class="h-[100%] w-[100%] mt-3 flex items-center justify-center">
@@ -30,7 +29,7 @@ const { href, title, body, backgroundColor, imgRef, owner } = Astro.props;
       </div>
       <div class="flex items-center justify-center mt-2">
         <p class="text-sm">
-          por: <span class="text-blue-900 owner:hover:underline">{owner}</span>
+          por <span class="text-blue-900 owner:hover:underline">{owner}</span>
         </p>
       </div>
 	  <div class="div-oculto mt-6">Contenido del div oculto.</div>

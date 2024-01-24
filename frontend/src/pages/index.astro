@@ -1,12 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Onest from "../public/fonts\static/Onest-Black.ttf"
 import Footer from "../components/Footer.astro";
+import MainPage from "../layouts/main-page/MainPage.astro";
 
 ---
 
-<Layout title="Welcome to Astro.">
+<MainPage title="Welcome to Astro.">
   <main>
     <h1 class="text-red-500">
       Welcome <span class="text-gradient">Astro</span>
@@ -36,7 +36,7 @@ import Footer from "../components/Footer.astro";
      
     </ul>
   </main>
-</Layout>
+</MainPage>
 
 <Footer/>
 
@@ -59,6 +59,8 @@ import Footer from "../components/Footer.astro";
   body{
     min-height: 100vh;
     color-scheme: light dark;
+    margin: 0;
+    padding: 0;
   }
   main {
     margin: auto;
