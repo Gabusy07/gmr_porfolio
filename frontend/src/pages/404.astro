@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import MainLayout from "../layouts/main-page/MainLayout.astro";
 ---
 
 <!doctype html>
@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
     <title>no encontrada</title>
   </head>
 
-  <Layout title="Error 404">
+  <MainLayout title="Error 404", description="">
     <div class="error_container border rounded-2">
         <div class="flex">
             <h3 class="text-left mr-2">La dirección que buscas no ha sido encontrada</h3>
@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
       
       </div>
     </div>
-  </Layout>
+  </MainLayout>
 </html>
 
 <style>

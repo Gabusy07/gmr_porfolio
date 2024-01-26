@@ -24,24 +24,20 @@ const { href, title, body, backgroundColor, imgRef, owner } = Astro.props;
       <p class="text-base">
         {body}
       </p>
-      <div class="h-[100%] w-[100%] mt-3 flex items-center justify-center">
+      <div class="image-container h-[100%] w-[100%] mt-3 flex items-center justify-center">
         <img src={imgRef} alt="imagen" class="w-[75%] h-[25%]" />
       </div>
-      <div class="flex items-center justify-center mt-2">
-        <p class="text-sm">
-          por <span class="text-blue-900 owner:hover:underline">{owner}</span>
-        </p>
-      </div>
-	  <div class="div-oculto mt-6">Contenido del div oculto.</div>
     
     </a>
   </li>
 </div>
 
 <style>
+
   .card-container {
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    z-index: var(--z-lower);
   }
 
   .card-container:hover {
@@ -49,16 +45,7 @@ const { href, title, body, backgroundColor, imgRef, owner } = Astro.props;
     opacity: 0.75;
   }
 
-  .owner:hover ~ .div-oculto {
-    display: block;
-  }
-
-  .div-oculto {
-	position: absolute;
-    display: none;
-	bottom: 2;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
+  .image-container{
+    z-index: var(--z-base);
   }
 </style>
