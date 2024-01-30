@@ -2,12 +2,12 @@
 import NavLinkCustom from "../NavLinkCustom.astro";
 ---
 
-<header class="h-15 border border-gray-400 rounded p-5 opacity-90 bg-gray-200 text-black w-full">
-  <div class="flex items-center justify-between mx-4">
-    <div class="">
+<header class="border border-gray-100 rounded p-4 md:p-5 opacity-90 bg-gray-200 text-black w-full">
+  <div class="block md:flex items-center justify-between mx-2 md:mx-4">
+    <div class="hidden md:block">
       <img src="" alt="avatar" />
     </div>
-    <nav class="flex space-x-4">
+    <nav class="sm:space-x-2 md:flex md:space-x-4">
       <NavLinkCustom linkName="projectos" href="#projects">
         <Fragment slot="before">
           <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
@@ -26,14 +26,18 @@ import NavLinkCustom from "../NavLinkCustom.astro";
         </Fragment>
       </NavLinkCustom>
     </nav>
-    <div>
-      <div class="container__switch">
-        <label class="switch">
-          <input type="checkbox" id="toggleButton" />
-          <span class="slider"></span>
-        </label>
-      </div>
+   
+      <div class="mt-auto sm:mt-3">
+        <div class="container__switch">
+          <label class="switch">
+            <input type="checkbox" id="toggleButton" />
+            <span class="slider"></span>
+          </label>
+        </div>
+     
     </div>
+      
+    
   </div>
 </header>
 

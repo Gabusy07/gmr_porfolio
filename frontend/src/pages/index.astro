@@ -3,6 +3,7 @@ import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import MainLayout from "../layouts/main-page/MainLayout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <MainLayout
@@ -10,8 +11,8 @@ import SectionContainer from "../components/SectionContainer.astro";
   .
   description="fullstack developer junior"
 >
-  <main>
-    <SectionContainer id="introduction">
+  <main class="p-4 md:p-6 lg:p-8 xl:p-10">
+    <SectionContainer id="introduction", title="Bienvenido">
       <div class="text-center">
         <h1 class="text-xl mb-3">
           Soy Gabriel Remes, desarrollador <span class="text-red-600 font-bold"
@@ -21,7 +22,7 @@ import SectionContainer from "../components/SectionContainer.astro";
         <p class="text-base mb-5">
           mayormente enfocado al desarrollo del backend
         </p>
-        <p class="text-sm text-gray-600">
+        <p class="text-sm opacity-70 text-pretty">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
           facere corporis inventore distinctio amet eligendi quidem sit aliquid,
           id sapiente animi a numquam quos magnam voluptatum tempora,
@@ -30,7 +31,11 @@ import SectionContainer from "../components/SectionContainer.astro";
       </div>
     </SectionContainer>
 
-    <SectionContainer id="projects">
+    <SectionContainer id="experience" title="Experiencia">
+       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects", title="Proyectos">
       <ul
         role="list"
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"

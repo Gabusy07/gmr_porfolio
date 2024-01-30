@@ -2,14 +2,16 @@
 const {id} = Astro.props;
 ---
 
-<footer id={id} class="footer w-full h-[12rem] mb-0 mt-5 flex">
-  <div>
+<footer id={id} class="footer w-full h-[12rem] md:h-[45vh] mb-0 mt-5 flex flex-col md:flex-row items-center">
+  <div class="hidden sm: size-5">
     <p>Contacto</p>
   </div>
-  <div id="links_container">
+    
+  <div id="links_container" class="lg:flex items-center justify-end w-full md:w-auto">
     <a
       href="mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso"
       target="_blank"
+      class="footer-link"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +24,7 @@ const {id} = Astro.props;
       </svg>
     </a>
 
-    <a href="https://github.com/Gabusy07" target="_blank">
+    <a href="https://github.com/Gabusy07" target="_blank" class="footer-link">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="bi bi-github"
@@ -37,6 +39,7 @@ const {id} = Astro.props;
     <a
       href="https://www.linkedin.com/in/gabriel-mayantz-remes/"
       target="_blank"
+      class="footer-link"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +52,7 @@ const {id} = Astro.props;
       </svg>
     </a>
 
-    <a href="https://api.whatsapp.com/send?phone=5493816170091" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=5493816170091" target="_blank" class="footer-link">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="bi bi-whatsapp"
@@ -92,17 +95,14 @@ const {id} = Astro.props;
 
   footer a {
     position: relative;
-    top: 30vh;
+    top: 10vh;
     margin: 1vh 1% auto 2.5%;
     width: 25px;
     fill: lightgray;
-    transition:
-      width,
-      transform,
-      filter 0.5s;
+    transition: width, transform, filter 0.5s;
   }
 
-  footer a:hover {
+  .footer-link:hover  {
     width: 35px;
     transition-delay: 0.1s;
     transform: translateY(-5px);

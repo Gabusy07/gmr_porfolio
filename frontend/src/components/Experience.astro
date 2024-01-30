@@ -1,0 +1,27 @@
+---
+
+const EXPERIENCE:Experience[] = [{
+    name: 'cnc',
+    place : 'dsfhd',
+    date: new Date()
+},
+{
+    name: 'cnc',
+    place : 'dsfhd',
+    date: new Date()
+}
+
+];
+---
+
+{
+    EXPERIENCE.map((exp)=>{
+        <div class="text-lg text-black-700">
+            <h3>{exp.name}</h3>
+            <p>{exp.place}</p>
+            <p>{exp.date}</p>
+       </div>
+
+
+    })
+}
