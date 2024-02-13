@@ -1,18 +1,22 @@
 ---
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
-import MainLayout from "../layouts/main-page/MainLayout.astro";
+import Layout from "../layouts/main-page/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
 ---
 
-<MainLayout
+<Layout
   title="porfolio - web software developer fullstack"
   .
   description="fullstack developer junior"
 >
   <main class="p-4 md:p-6 lg:p-8 xl:p-10">
-    <SectionContainer id="introduction", title="Bienvenido">
+    <!-- <SectionContainer id="introduction", title="Bienvenido">
       <div class="text-center">
         <h1 class="text-xl mb-3">
           Soy Gabriel Remes, desarrollador <span class="text-red-600 font-bold"
@@ -57,9 +61,18 @@ import Experience from "../components/Experience.astro";
           owner="noCountry"
         />
       </ul>
-    </SectionContainer>
+    </SectionContainer> -->
+    <SectionContainer id="" title=""><Hero /></SectionContainer>
+    <SectionContainer id="" title=""><About /></SectionContainer>
+    <SectionContainer id="" title=""><Experience /></SectionContainer>
+    <SectionContainer id="" title=""><Skills /></SectionContainer>
+    <SectionContainer id="" title=""><Projects /></SectionContainer>
+    
+    
+     
+    
   </main>
-</MainLayout>
+</Layout>
 
 <Footer id="contact-me" />
 
