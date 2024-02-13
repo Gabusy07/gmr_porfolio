@@ -10,11 +10,18 @@ const {id, title, className }=  Astro.props;
 
 ---
 
-<section id={id} class={`mt-8 p-7 ${className}`}>
-    <div class="mt-3">
+<section id={id} class={`p-3 border border-green-500 ${className}`}>
+    <div class="container">
       <h2>
         {title}
       </h2>
     </div>
-    <slot/>
+   <slot/> 
 </section>
+
+<style>
+  section{
+    max-width: 700px;
+    margin: 0 auto 72px;
+  }
+</style>

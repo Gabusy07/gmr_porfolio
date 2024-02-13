@@ -1,3 +1,35 @@
-<div>
-    <label for=""></label>
+---
+import { basics } from "../resume.json";
+
+const { name, label, location, email, image } = basics;
+const { city, region } = location;
+---
+
+<div class="flex flex-col lg:flex-row items-center">
+    <div class="lg:mr-auto mb-4 lg:mb-0 lg:pr-4"> <!-- Utilizamos 'lg:mr-auto' para empujar el contenido hacia la izquierda en pantallas grandes -->
+        <h1 class="text-2xl lg:text-3xl font-bold mb-2">{name}</h1>
+        <h2 class="text-lg lg:text-xl font-semibold mb-2">{label}</h2>
+        <span class="text-sm lg:text-base">{city} {region}</span>
+        <footer>
+            {
+                email && (
+                    <>
+                        <a
+                            href={`mailto:${email}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-500 hover:underline inline-block mr-2"
+                        >
+                            send email {email}
+                        </a>
+                        <a class="text-blue-500 hover:underline inline-block">8</a>
+                    </>
+                )
+            }
+        </footer>
+    </div>
+
+    <figure class="img w-full lg:w-[20%] h-[150px] lg:h-[20%] min-w-[25px] min-h-[25px]">
+        <img src={image} alt={name}/>
+    </figure>
 </div>
