@@ -1,24 +1,17 @@
 {
     "basics": {
       "name": "John Doe",
-      "label": "Programmer",
+      "label": "Software developer",
       "image": "./public/img/photo.jpg",
-      "email": "john@gmail.com",
-      "phone": "(912) 555-4321",
-      "url": "https://johndoe.com",
+      "email": "mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso",
+      "phone": "https://api.whatsapp.com/send?phone=5493816170091",
       "summary": "A summary of John Doe…",
+      "linkedIn" : "https://www.linkedin.com/in/gabriel-mayantz-remes/",
+      "github" : "https://github.com/Gabusy07",
       "location": {
-        "address": "2712 Broadway St",
-        "postalCode": "CA 94115",
-        "city": "San Francisco",
-        "countryCode": "US",
-        "region": "California"
-      },
-      "profiles": [{
-        "network": "Twitter",
-        "username": "john",
-        "url": "https://twitter.com/john"
-      }]
+        "region": "Tucuman",
+        "country": "Argentina"
+      }
     },
     "work": [{
       "name": "Company",
