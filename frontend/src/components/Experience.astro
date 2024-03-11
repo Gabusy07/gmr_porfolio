@@ -1,27 +1,32 @@
 ---
+import { work } from "../resume.json";
 
-const EXPERIENCE:Experience[] = [{
-    name: 'cnc',
-    place : 'dsfhd',
-    date: new Date()
-},
-{
-    name: 'cnc',
-    place : 'dsfhd',
-    date: new Date()
-}
-
-];
+const EXPERIENCE = work;
 ---
 
-{
-    EXPERIENCE.map((exp)=>{
-        <div class="text-lg text-black-700">
-            <h3>{exp.name}</h3>
-            <p>{exp.place}</p>
-            <p>{exp.date}</p>
-       </div>
+<ul>
+  {
+    EXPERIENCE.map((exp) => {
+        const fullStartDate = new Date(exp.startDate);
+      const startDate = + fullStartDate.getFullYear().toString() + "/" + fullStartDate.getMonth().toString() ;
+      return (
+        <li class="mb-3">
+          <article>
+            <header class="flex text-lg justify-between items-start mb-2 font-bold text-gray-500">
+              <div>
+                <h1 class="h1">{exp.position}</h1>
+                <h2 class="h2">{exp.name}</h2>
+              </div>
+              <time class="text-base font-bold text-gray-400">{startDate}</time>
+            </header>
 
-
+            <footer class="text-base text-black-700 text-pretty">
+              <summary>{exp.summary}</summary>
+              <small>Ir a<a class="text-blue-500 font-semibold" href={exp.url}> {exp.name}</a></small>
+            </footer>
+          </article>
+        </li>
+      );
     })
-}
+  }
+</ul>

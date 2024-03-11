@@ -1,0 +1,15 @@
+---
+import { skills } from "../resume.json";
+---
+
+<ul class="flex flex-wrap gap-3">
+  {
+    skills.map((skill) => (
+      <li>
+        <span class="bg-gray-200 border border rounded-xl text-blue-700 text-base font-semibold lowercase p-5 bg-opacity-50 min-w-[200px]">
+          {skill.name}
+        </span>
+      </li>
+    ))
+  }
+</ul>

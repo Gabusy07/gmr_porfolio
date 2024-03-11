@@ -10,13 +10,15 @@ const {id, title, className }=  Astro.props;
 
 ---
 
-<section id={id} class={`p-3 border border-green-500 ${className}`}>
+<section id={id} class={`p-5 border border-gray-300 rounded-xl ${className}`}>
     <div class="container m-2">
-      <h2 class="text-xl font-bold">
+      <h2 class="text-xl font-bold mb-5">
         {title}
       </h2>
     </div>
-   <slot/> 
+    <div class="ml-2">
+      <slot/> 
+    </div>
 </section>
 
 <style>

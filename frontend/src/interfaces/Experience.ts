@@ -1,5 +1,9 @@
 interface Experience {
-    name: string;
-    place : string;
-    date: Date;
+    name: String;
+    position: String;
+    url: String;
+    startDate: String;
+    endDate: String;
+    summary: String;
+    highlights: [];
 }
