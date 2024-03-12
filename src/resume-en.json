@@ -1,71 +1,63 @@
 {
-    "basics": {
-      "name": "Gabriel Mayantz Remes",
-      "label": "Software developer",
-      "image": "./public/img/photo.jpg",
-      "email": "mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso",
-      "phone": "https://api.whatsapp.com/send?phone=5493816170091",
-      "summary": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus?",
-      "linkedIn" : "https://www.linkedin.com/in/gabriel-mayantz-remes/",
-      "github" : "https://github.com/Gabusy07",
-      "location": {
-        "region": "Tucuman",
-        "country": "Argentina"
-      }
-    },
-    "work": [{
-      "name": "Techforb",
-      "position": "Fullstack developer",
-      "url": "https://company.com",
-      "startDate": "2023-01-04",
-      "endDate": "2024-01-01",
-      "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
-      "highlights": [
-        "Started the company"
-      ]
-    },{
-      "name": "Techforb",
-      "position": "Fullstack developer",
-      "url": "https://company.com",
-      "startDate": "2023-02-01",
-      "endDate": "2023-04-19",
-      "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
-      "highlights": [
-        "Started the company"
-      ]
+  "basics": {
+    "name": "Gabriel Mayantz Remes",
+    "label": "Software developer",
+    "image": "./public/img/photo.jpg",
+    "email": "mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso",
+    "phone": "https://api.whatsapp.com/send?phone=5493816170091",
+    "summary": "I am a FullStack Developer with a specialization in Frontend Angular, showcasing significant experience in the design and development of web applications. My focus lies in Angular, where I have solidified skills, effective collaboration in multidisciplinary teams, and rigorous adherence to quality standards for digital products. My goal is to contribute to project success through the application of best development practices and ongoing learning.",
+    "linkedIn": "https://www.linkedin.com/in/gabriel-mayantz-remes/",
+    "github": "https://github.com/Gabusy07",
+    "location": {
+      "region": "Tucuman",
+      "country": "Argentina"
     }
-    ,{
-      "name": "Techforb",
-      "position": "Fullstack developer",
+  },
+  "work": [
+    {
+      "name": "NoCountry",
+      "position": "Backend developer",
       "url": "https://company.com",
-      "startDate": "2013-01-01",
+      "startDate": "2024-02-01",
       "endDate": null,
       "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
-      "highlights": [
-        "Started the company"
-      ]
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Techforb - Avla",
+      "position": "Fullstack developer",
+      "url": "https://company.com",
+      "startDate": "2023-04-20",
+      "endDate": "2024-01-1",
+      "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "NoCountry",
+      "position": "Backend developer",
+      "url": "https://company.com",
+      "startDate": "2022-12-01",
+      "endDate": "2023-04-01",
+      "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
+      "highlights": ["Started the company"]
     }
   ],
-    "education": [{
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
-      ]
-    }],
-    "skills": [{
+  "education": [
+    {
+      "institution": "Universidad Nacional de Tucuman",
+      "area": "Humananities",
+      "studyType": "Bachelor"
+    }
+  ],
+  "skills": [
+    {
       "name": "CSS"
     },
     {
       "name": "Angular"
     },
     {
-      "name":"Git"
+      "name": "Git"
     },
     {
       "name": "Tailwind"
@@ -84,6 +76,12 @@
     },
     {
       "name": "Springboot"
+    },
+    {
+      "name": "Hibernate"
+    },
+    {
+      "name": "JUnit"
     },
     {
       "name": "Mysql"
@@ -122,39 +120,45 @@
       "name": "Linux"
     }
   ],
-    "languages": [{
+  "languages": [
+    {
       "language": "English",
-      "fluency": "Native speaker"
+      "flag": "../public/icons/us-flag.png",
+      "fluency": "intermediate level",
+      "level": "B2"
     },
     {
       "language": "Spanish",
-      "fluency": "Native speaker"
-    }],
-    "references": [{
+      "fluency": "Native speaker",
+      "flag": "../public/icons/spain-flag.png",
+      "level": null
+    }
+  ],
+  "references": [
+    {
       "name": "Jane Doe",
       "reference": "Reference…"
-    }],
-    "projects": [{
+    }
+  ],
+  "projects": [
+    {
       "name": "TripMate",
       "isActive": false,
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "description": "Description... fffffffsdfshbdshbsdhbnsfnfdsn dfbhgshbsfdb sx xbgsdbszdb sz  zdbdb zsss zdbgsz",
-      "picture":"../public/img/tripmate-logo.png",
-      "highlights": [
-        "Won award at AIHacks 2016"
-      ],
+      "picture": "../public/img/tripmate-logo.png",
+      "highlights": ["Won award at AIHacks 2016"],
       "url": "https://github.com/No-Country/s7-09-T-JavaReact"
-    }, {
+    },
+    {
       "name": "SBT",
       "isActive": true,
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "description": "Description...",
-      "picture":"../public/img/sbt-icon.png",
-      "highlights": [
-        "Won award at AIHacks 2016", "dgbvdsbs"
-      ],
+      "picture": "../public/img/sbt-icon.png",
+      "highlights": ["Won award at AIHacks 2016", "dgbvdsbs"],
       "url": "https://github.com/No-Country/s13-11-m-java"
     },
     {
@@ -163,11 +167,9 @@
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "description": "Description...",
-      "picture":"../public/img/noCountry-logo.jpg",
-      "highlights": [
-        "Won award at AIHacks 2016", "dgbvdsbs"
-      ],
+      "picture": "../public/img/noCountry-logo.jpg",
+      "highlights": ["Won award at AIHacks 2016", "dgbvdsbs"],
       "url": "https://github.com/No-Country/C9-G34"
     }
   ]
-  }
+}

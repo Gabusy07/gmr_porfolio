@@ -1,0 +1,16 @@
+---
+import { education } from "../resume-en.json";
+---
+
+<div class="font-normal text-pretty">
+  {
+    education.map((edu) => {
+      return (
+        <article>
+              <h2 class="text-lg mb-3"> {` ${edu.studyType} in ${edu.area}`}</h2>
+              <h4 class="text-base ">{`at ${edu.institution}`}</h4>
+        </article>
+      );
+    })
+  }
+</div>
