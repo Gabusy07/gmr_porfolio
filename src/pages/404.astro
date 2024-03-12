@@ -1,0 +1,46 @@
+---
+import MainLayout from "../layouts/Layout.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-16" />
+    <meta name='gmr-info"' content="error-404" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>no encontrada</title>
+  </head>
+
+  <MainLayout title="Error 404" , description="">
+    <div class="error_container border rounded-2">
+      <div class="flex gap-x-4">
+        <span>
+          <img src="../public/icons/sentiment_sad_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        </span>
+        <h3 class="text-left text-2xl">
+          La dirección que buscas no ha sido encontrada
+        </h3>
+        <span
+          ><i>
+            <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="info" />
+          </i></span
+        >
+      </div>
+      <div class="ml-9 mt-3 flex justify-start items-end gap-x-3">
+        <small>Puedes volver al inicio a través del siguiente link </small>
+        <img class="mt-1" src="../public/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        <a class="text-blue-700 text-base" href="./">volver a inicio</a>
+      </div>
+    </div>
+  </MainLayout>
+
+
+  <style>
+    .error_container {
+      padding: 10%;
+      margin: 10% 5%;
+    }
+  </style>
+</html>
