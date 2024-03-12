@@ -2,44 +2,56 @@
 import NavLinkCustom from "../NavLinkCustom.astro";
 ---
 
-<header class="border border-gray-100 rounded p-4 md:p-5 bg-opacity-30 transparent bg-gray-200 text-black w-full">
+<header
+  class="border border-gray-100 rounded p-4 md:p-5 bg-opacity-30 transparent bg-gray-200 text-black w-full"
+>
   <div class="block md:flex items-center justify-between mx-2 md:mx-4">
-    <nav class="hidden sm:block sm:space-x-2 md:flex md:space-x-4">
-      <NavLinkCustom linkName="projectos" href="#projects">
-        <Fragment slot="before">
-          <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-        </Fragment>
-      </NavLinkCustom>
+    <div class="flex gap-x-5">
+      <nav class="hidden sm:block sm:space-x-2 md:flex md:space-x-4">
+        <NavLinkCustom linkName="projectos" href="#projects">
+          <Fragment slot="before">
+            <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          </Fragment>
+        </NavLinkCustom>
 
-      <NavLinkCustom linkName="experiencia" href="#experience">
-        <Fragment slot="before">
-          <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-        </Fragment>
-      </NavLinkCustom>
+        <NavLinkCustom linkName="experiencia" href="#experience">
+          <Fragment slot="before">
+            <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          </Fragment>
+        </NavLinkCustom>
 
-      <NavLinkCustom linkName="contactame" href="#contact-me">
-        <Fragment slot="before">
-          <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-        </Fragment>
-      </NavLinkCustom>
-    </nav>
-   
-      <div class="float-right mt-auto sm:mt-3">
-        <div class="container__switch">
-          <label class="switch">
-            <input type="checkbox" id="toggleButton" />
-            <span class="slider"></span>
-          </label>
+        <NavLinkCustom linkName="contactame" href="#contact-me">
+          <Fragment slot="before">
+            <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          </Fragment>
+        </NavLinkCustom>
+      </nav>
+
+      <div id="lenguage" class="dropdown">
+        
+        <span class="dropdown-item"> Lenguage</span>
+
+        <div class="dropdown-content">
+          <span id="es" class="dropdown-item">Spanish</span>
+          <span id="en" class="dropdown-item">English</span>
         </div>
+      </div>
     </div>
-      
-    
+
+    <div class="float-right mt-auto sm:mt-3">
+      <div class="container__switch">
+        <label class="switch">
+          <input type="checkbox" id="toggleButton" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
   </div>
 </header>
 
-<style>
 
-  header{
+<style>
+  header {
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +83,7 @@ import NavLinkCustom from "../NavLinkCustom.astro";
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
-    border-radius: 1rem;
+    border-radius: 2rem;
   }
 
   .slider:before {
@@ -98,4 +110,35 @@ import NavLinkCustom from "../NavLinkCustom.astro";
     transform: translateX(1.5rem);
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: var(--z-priority);
+    min-width: 33px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown-item:hover {
+    background-color: #ddd;
+  }
 </style>
+

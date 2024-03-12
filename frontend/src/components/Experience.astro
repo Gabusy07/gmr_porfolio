@@ -1,14 +1,29 @@
 ---
-import { work } from "../resume.json";
+import { work } from "../resume-en.json";
 
 const EXPERIENCE = work;
+
+EXPERIENCE.sort((a, b) => {
+  const startDateA: any = new Date(a.startDate);
+  const startDateB: any = new Date(b.startDate);
+
+  return startDateB - startDateA;
+});
 ---
 
 <ul>
   {
     EXPERIENCE.map((exp) => {
-        const fullStartDate = new Date(exp.startDate);
-      const startDate = + fullStartDate.getFullYear().toString() + "/" + fullStartDate.getMonth().toString() ;
+      const fullStartDate = new Date(exp.startDate);
+      const fullEndDate = exp.endDate ? new Date(exp.endDate) : new Date();
+      const startDate =
+        +fullStartDate.getFullYear().toString() +
+        "/" +
+        (fullStartDate.getMonth() + 1).toString();
+      const endDate =
+        +fullEndDate.getFullYear().toString() +
+        "/" +
+        (fullEndDate.getMonth() + 1).toString();
       return (
         <li class="mb-3">
           <article>
@@ -17,12 +32,20 @@ const EXPERIENCE = work;
                 <h1 class="h1">{exp.position}</h1>
                 <h2 class="h2">{exp.name}</h2>
               </div>
-              <time class="text-base font-bold text-gray-400">{startDate}</time>
+              <time class="text-base font-bold text-gray-400">
+                {startDate} - {exp.endDate ? endDate : "actualidad"}
+              </time>
             </header>
 
             <footer class="text-base text-black-700 text-pretty">
               <summary>{exp.summary}</summary>
-              <small>Ir a<a class="text-blue-500 font-semibold" href={exp.url}> {exp.name}</a></small>
+              <small>
+                Ir a
+                <a class="text-blue-500 font-semibold" href={exp.url}>
+                 
+                  {exp.name}
+                </a>
+              </small>
             </footer>
           </article>
         </li>
