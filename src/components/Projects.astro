@@ -1,0 +1,61 @@
+---
+import { projects } from "../resume-en.json";
+---
+
+<ul>
+  {
+    projects.map((project) => (
+      <article class="p-3 m-1">
+        <header class="mb-3">
+          <a
+            class="text-base text-green-700 font-semibold hover:text-lg hover:underline"
+            title="Ver codigo"
+            href={project.url}
+            target="_blank"
+          >
+            <h3 class="inline text-lg">{project.name}</h3>
+          </a>
+          {project.isActive && (
+            <span class="ml-3 text-blue-600 text-xs font-semibold">
+              &bull; En desarrollo
+            </span>
+          )}
+        </header>
+        <body class="mb-3 text-base">
+          <figure>
+            <img
+              class="img max-w-[220px] rounded-md"
+              src={project.picture}
+              alt=""
+            />
+          </figure>
+          {project.description}
+        </body>
+        <footer>
+          <ul class="flex flex-wrap gap-3 mt-5">
+            {project.highlights.map((highlight) => (
+              <span class="text-sm font-extralight bg-blue-100 border border rounded-xl text-gray-700 text-base font-semibold lowercase px-4 py-1">
+                {highlight}
+              </span>
+            ))}
+          </ul>
+        </footer>
+      </article>
+    ))
+  }
+</ul>
+
+<style>
+  header {
+    flex: 1;
+  }
+  article {
+    border-bottom: 1px solid gray;
+    height: 100%;
+  }
+
+  .img {
+    aspect-ratio: 2 / 2;
+    object-fit: cover;
+  }
+</style>

@@ -1,0 +1,64 @@
+---
+import { ViewTransitions, fade } from "astro:transitions";
+import Header from "../components/Header.astro";
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-16" />
+    <meta name='gmr-info' content="gmr-info" />
+    <meta name='description' content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <div class="w-full md:w-1/2 lg:w-1/2 xl:w-full mb-[10rem]">
+    <Header/>
+  </div>
+  <body
+    transition:animate={fade({ duration: "0.4s" })}
+  >
+    <slot />
+    <script src="./darklightmode-control.ts"></script>
+  </body>
+
+  <style is:global>
+    body {
+      padding: 3rem;
+    }
+
+    
+    html {
+      font-family: system-ui, sans-serif;
+      background-size: 224px;
+      scroll-behavior: smooth;
+    }
+
+    @media(prefers-reduce-motion: reduce){
+    html {
+      scroll-behavior: none;
+    }}
+
+
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
+</html>

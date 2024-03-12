@@ -1,0 +1,26 @@
+---
+import { languages } from "../resume-en.json";
+---
+
+<div class="text-base font-normal text-pretty">
+  <ul class="grid grid-cols-6">
+    {
+      languages.map(({ language, fluency, level, flag }) => {
+        return (
+          <li class= "mb-7 col-span-full md:col-span-3" >
+            <div class="flex gap-x-3">
+                <h3>&bull; {language}</h3>
+                <span>
+                    <img class="w-6 h-6" src={flag} alt=""></span>
+                </div>
+            
+            <div class="flex">
+              <p>&nbsp;{level ? level : ""}</p>
+              <p>&nbsp;{fluency}</p>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

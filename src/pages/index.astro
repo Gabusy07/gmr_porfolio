@@ -1,0 +1,142 @@
+---
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Hero from "../components/Hero.astro";
+import Education from "../components/Education.astro";
+import Language from "../components/Languages.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+---
+
+<Layout
+  title="porfolio - web software developer fullstack"
+  .
+  description="fullstack developer junior"
+>
+  <main class="p-4 md:p-6 lg:p-8 xl:p-10">
+    <!-- <SectionContainer id="introduction", title="Bienvenido">
+      <div class="text-center">
+        <h1 class="text-xl mb-3">
+          Soy Gabriel Remes, desarrollador <span class="text-red-600 font-bold"
+            >fullstack</span
+          >
+        </h1>
+        <p class="text-base mb-5">
+          mayormente enfocado al desarrollo del backend
+        </p>
+        <p class="text-sm opacity-70 text-pretty">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          facere corporis inventore distinctio amet eligendi quidem sit aliquid,
+          id sapiente animi a numquam quos magnam voluptatum tempora,
+          consectetur iste sequi.
+        </p>
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="experience" title="Experiencia">
+       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects", title="Proyectos">
+      <ul
+        role="list"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4"
+      >
+        <Card
+          href="lumini"
+          title="Lumini"
+          body="Proyecto grupal de  red social"
+          backgroundColor="bg-gradient-to-r from-green-600 via-green-500 to-green-500"
+          imgRef="../public/noCountry-logo.png"
+          owner="noCountry"
+        />
+        <Card
+          href="tripmate"
+          title="TripMate"
+          body="Proyecto grupal de comunidad de viaje "
+          backgroundColor="bg-gradient-to-r from-yellow-500 via-yellow-500 to-yellow-400"
+          imgRef="../public/tripmate-logo.png"
+          owner="noCountry"
+        />
+      </ul>
+    </SectionContainer> -->
+    <SectionContainer id="" title=""><Hero /></SectionContainer>
+    <SectionContainer id="" title="About"><About /></SectionContainer>
+    <SectionContainer id="" title="Languages"><Language /></SectionContainer>
+    <SectionContainer id="" title="Work"><Experience /></SectionContainer>
+    <SectionContainer id="" title="Skills"><Skills /></SectionContainer>
+    <SectionContainer id="" title="Projects"><Projects /></SectionContainer>
+    <SectionContainer id="" title="Education"><Education /></SectionContainer>
+    
+    
+  </main>
+</Layout>
+<Footer id="contact-me" />
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const languageDropdown: HTMLElement | null = document.getElementById("lenguage");
+  
+
+  if (languageDropdown) {
+    languageDropdown.addEventListener("click", function (event: MouseEvent) {
+      const targetElement = event.target as HTMLElement;
+      if (targetElement.classList.contains("dropdown-item")) {
+        const selectedLanguageId:string = targetElement.id;
+        changeLanguage(selectedLanguageId)
+      }
+    });
+  }
+});
+
+async function changeLanguage(lang: string) {
+    try {
+      const response: Response = await fetch(`../src/resume-${lang}.json`);
+      return response;
+
+    } catch (error) {
+      console.error("Error al obtener el JSON:", error);
+    }
+  }
+
+</script>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap");
+
+  :root {
+    --color-violet: rgb(73 35 242);
+    --z-high-priority: 1000;
+    --z-priority: 10;
+    --z-base: 1;
+    --z-lower: 0;
+  }
+
+  html {
+    font-family: "Onest", sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    margin: auto;
+    padding: 1rem;
+    max-width: calc(100% - 2rem);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-bottom: 5rem;
+  }
+</style>

@@ -1,0 +1,43 @@
+---
+import Angular from "../icons/Angular.astro";
+import { skills } from "../resume-en.json";
+import Git from "../icons/Git.astro";
+import EmptyIcon from "../icons/EmptyIcon.astro";
+import CSS from "../icons/CSS.astro";
+import Java from "../icons/Java.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import SCSS from "../icons/SCSS.astro";
+import Typescript from "../icons/Typescript.astro";
+import Springboot from "../icons/Spring.astro";
+import Python from "../icons/Python.astro";
+
+const ICONS: Record<string, any> = {
+  Angular,
+  CSS,
+  Java,
+  Git,
+  Tailwind,
+  SCSS,
+  Typescript,
+  Springboot,
+  Python
+};
+---
+
+<ul class="flex flex-wrap gap-3">
+  {
+    skills.map((skill) => {
+      const Icon = ICONS[skill.name] ? ICONS[skill.name] : EmptyIcon;
+      return (
+        <li>
+          <span class="flex items-center justify-center gap-x-3 bg-gray-100 border border rounded-xl text-blue-700 text-base font-semibold lowercase p-5 bg-opacity-50 min-w-[200px]">
+           
+              <Icon height="25" width="25" />
+
+            <p>{skill.name}</p>
+          </span>
+        </li>
+      );
+    })
+  }
+</ul>
