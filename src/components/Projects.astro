@@ -36,7 +36,9 @@ import Highlight from "./Higlight.astro";
         <footer>
           <ul class="flex flex-wrap gap-3 mt-5">
             {project.highlights.map((highlight) => {
+              return (
               <Highlight text={highlight} />
+              )
             })}
           </ul>
         </footer>
