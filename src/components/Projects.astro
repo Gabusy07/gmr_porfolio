@@ -1,16 +1,17 @@
 ---
 import { projects } from "../resume-en.json";
-import Highlight from "./Higlight.astro"
+import Highlight from "./Higlight.astro";
 ---
 
 <ul>
   {
-    projects.map((project) => (
+    projects.map((project) => {
+      return (
       <article class="p-3 m-1">
         <header class="mb-3">
           <a
             class="text-base text-green-700 font-semibold hover:text-lg hover:underline"
-            title="Ver codigo"
+            title="See repository"
             href={project.url}
             target="_blank"
           >
@@ -18,29 +19,31 @@ import Highlight from "./Higlight.astro"
           </a>
           {project.isActive && (
             <span class="ml-3 text-blue-600 text-xs font-semibold">
-              &bull; En desarrollo
+              &bull; In progress
             </span>
           )}
         </header>
-        <body class="mb-3 text-base">
-          <figure>
+        <div class="mb-3 text-thin">
+          <figure class="mb-5">
             <img
               class="img max-w-[18rem] rounded-md"
               src={project.picture}
               alt=""
             />
           </figure>
-          {project.description}
-        </body>
+          <p class="font-thin opacity-75">{project.description}</p>
+        </div>
         <footer>
           <ul class="flex flex-wrap gap-3 mt-5">
-            {project.highlights.map((highlight) => (
-              <Highlight text={highlight}></Highlight>
-            ))}
+            {project.highlights.map((highlight) => {
+              <Highlight text={highlight} />
+            })}
           </ul>
         </footer>
       </article>
-    ))
+      )
+      
+    })
   }
 </ul>
 

@@ -1,5 +1,6 @@
 ---
 import { work } from "../resume-en.json";
+import Highlight from "./Higlight.astro"
 
 const EXPERIENCE = work;
 
@@ -25,7 +26,7 @@ EXPERIENCE.sort((a, b) => {
         "/" +
         (fullEndDate.getMonth() + 1).toString();
       return (
-        <li class="mb-3">
+        <li class="mb-12">
           <article>
             <header class="flex text-lg justify-between items-start mb-2 font-bold text-gray-500">
               <div>
@@ -37,15 +38,23 @@ EXPERIENCE.sort((a, b) => {
               </time>
             </header>
 
-            <footer class="text-base text-black-700 text-pretty">
+            <footer class="text-base text-black-700">
               <summary>{exp.summary}</summary>
-              <small>
-                Ir a
-                <a class="text-blue-500 font-semibold" href={exp.url}>
-                 
-                  {exp.name}
-                </a>
-              </small>
+              {exp.urls.map((url) => {
+                return (
+                  <small>
+                    Ir a
+                    <a class="text-blue-500 font-semibold" href={url} target="_blank">
+                      {exp.name}
+                    </a>
+                  </small>
+                );
+              })}
+              <ul class="flex flex-wrap gap-3 mt-5">
+            {exp.highlights.map((highlight) => (
+              <Highlight text={highlight}></Highlight>
+            ))}
+          </ul>
             </footer>
           </article>
         </li>
@@ -53,3 +62,9 @@ EXPERIENCE.sort((a, b) => {
     })
   }
 </ul>
+
+<style>
+  summary{
+    word-wrap: break-word;
+  }
+</style>
