@@ -144,8 +144,8 @@
     {
       "name": "TripMate",
       "isActive": false,
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
+      "startDate": null,
+      "endDate": null,
       "description": "Description... fffffffsdfshbdshbsdhbnsfnfdsn dfbhgshbsfdb sx xbgsdbszdb sz  zdbdb zsss zdbgsz",
       "picture": "../public/img/tripmate-logo.png",
       "highlights": ["Won award at AIHacks 2016"],
@@ -154,18 +154,28 @@
     {
       "name": "SBT",
       "isActive": true,
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
+      "startDate": null,
+      "endDate": null,
       "description": "Description...",
       "picture": "../public/img/sbt-icon.png",
       "highlights": ["Won award at AIHacks 2016", "dgbvdsbs"],
       "url": "https://github.com/No-Country/s13-11-m-java"
     },
     {
+      "name": "Xepelin",
+      "isActive": false,
+      "startDate": null,
+      "endDate": null,
+      "description": "Description...",
+      "picture": "../public/img/xepelin-logo.png",
+      "highlights": ["Won award at AIHacks 2016", "dgbvdsbs"],
+      "url": "https://github.com/No-Country/s8-04-m-node-react-xepelin"
+    },
+    {
       "name": "Lumini",
       "isActive": false,
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
+      "startDate": null,
+      "endDate": null,
       "description": "Description...",
       "picture": "../public/img/noCountry-logo.jpg",
       "highlights": ["Won award at AIHacks 2016", "dgbvdsbs"],
