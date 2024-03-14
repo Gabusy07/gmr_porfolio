@@ -1,28 +1,36 @@
 ---
-
 interface Props {
   id: string;
-  title:string;
+  title: string;
+  icon?: string;
   className?: string;
 }
 
-const {id, title, className }=  Astro.props;
-
+const { id, title, icon, className } = Astro.props;
 ---
 
 <section id={id} class={`p-5 border border-gray-300 rounded-xl ${className}`}>
-    <div class="container m-2">
+ 
+    <div class="container m-2 flex justify-between">
       <h2 class="text-xl font-bold mb-5">
         {title}
       </h2>
+      {
+        icon? <img  class="w-[1.5rem] h-[1.5rem]" src={icon} /> : null
+      }
+      
     </div>
     <div class="ml-2">
-      <slot/> 
+      <slot />
     </div>
+  </div>
+    
+      
 </section>
 
 <style>
-  section{
+  section {
+    flex-direction: row;
     min-width: 275px;
     max-width: 700px;
     margin: 0 auto 72px;
