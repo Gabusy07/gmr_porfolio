@@ -6,9 +6,9 @@ interface Props {
 
 const { linkName, href} = Astro.props;
 ---
-<div class="flex">
+<div class="flex align-items-end">
   <slot class="mx-1" name="before"/>
-  <a class="mx-1 name bolder" href={href}>{linkName}</a>
+  <a class="mx-1 name bolder hover:underline" href={href}>{linkName}</a>
   <slot class="mx-1" name="after"/>
 </div>
 
@@ -18,6 +18,7 @@ const { linkName, href} = Astro.props;
     color: red;
 
   }
+
 
 </style>
    
