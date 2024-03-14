@@ -18,7 +18,7 @@
       "name": "NoCountry",
       "position": "Backend developer",
       "url": "https://company.com",
-      "startDate": "2024-02-01",
+      "startDate": "2024-02-02",
       "endDate": null,
       "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
       "highlights": ["Started the company"]
@@ -27,8 +27,8 @@
       "name": "Techforb - Avla",
       "position": "Fullstack developer",
       "url": "https://company.com",
-      "startDate": "2023-04-20",
-      "endDate": "2024-01-1",
+      "startDate": "2023-04-02",
+      "endDate": "2024-01-02",
       "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
       "highlights": ["Started the company"]
     },
@@ -36,8 +36,8 @@
       "name": "NoCountry",
       "position": "Backend developer",
       "url": "https://company.com",
-      "startDate": "2022-12-01",
-      "endDate": "2023-04-01",
+      "startDate": "2022-12-02",
+      "endDate": "2023-04-02",
       "summary": "Description… Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex nam eligendi velit, sapiente ducimus facilis perspiciatis iusto labore, voluptatem blanditiis dignissimos omnis ullam, perferendis alias consequuntur laudantium nemo minus",
       "highlights": ["Started the company"]
     }
