@@ -142,11 +142,21 @@
   ],
   "projects": [
     {
+      "name": "Data manager aplication",
+      "isActive": true,
+      "startDate": null,
+      "endDate": null,
+      "description": "Personal project in which, through the ChatGPT API, I can generate customized GPTs to analyze a database based on user-input instructions and execute actions accordingly.",
+      "picture": "",
+      "highlights": [],
+      "url": "https://github.com/Gabusy07/gpt-analyzer"
+    },
+    {
       "name": "TripMate",
       "isActive": false,
       "startDate": null,
       "endDate": null,
-      "description": "",
+      "description": "Five-week project carried out with a large multidisciplinary team for noCountry. I took on the role in the backend team, performing tasks such as database design, class design, and providing technical solutions support to my team members. I played a prominent role in team organization and communication. I strengthened soft skills by pair programming.",
       "picture": "../public/img/tripmate-logo.png",
       "highlights": [],
       "url": "https://github.com/No-Country/s7-09-T-JavaReact"
@@ -156,7 +166,7 @@
       "isActive": true,
       "startDate": null,
       "endDate": null,
-      "description": "Five-week project carried out in collaboration with a large multidisciplinary team. I took on the main role in the backend team, performing tasks such as database design and application design, as well as providing technical solutions support to my team members. I played a prominent role in team organization as well as communication among other members from areas such as frontend and UX.",
+      "description": "Five-week project carried out in collaboration with a large multidisciplinary team. I took on the main role in the backend team, performing tasks such as application database design and providing technical solutions support to my team members. I played a prominent role in team organization as well as communication among other members from areas such as frontend and UX.",
       "picture": "../public/img/sbt-icon.png",
       "highlights": [],
       "url": "https://github.com/No-Country/s13-11-m-java"
