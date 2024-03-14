@@ -1,0 +1,38 @@
+---
+const {text} = Astro.props;
+---
+
+<span class="text-sm font-extralight bg-blue-100 border border rounded-xl text-gray-700 text-base font-semibold lowercase px-4 py-1">
+    {text}
+</span>
+
+<style>
+
+span {
+        position: relative;
+        overflow: hidden;
+    }
+
+    span::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 25%; 
+        height: 100%;
+        background: linear-gradient(to right, rgba(255,255,255,0.5), transparent);
+    }
+
+    span:hover::after {
+        animation: slide 0.5s ease-in-out;;
+    }
+
+    @keyframes slide {
+        0% {
+            left: -50%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+</style>

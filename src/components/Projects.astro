@@ -1,5 +1,6 @@
 ---
 import { projects } from "../resume-en.json";
+import Highlight from "./Higlight.astro"
 ---
 
 <ul>
@@ -24,7 +25,7 @@ import { projects } from "../resume-en.json";
         <body class="mb-3 text-base">
           <figure>
             <img
-              class="img max-w-[220px] rounded-md"
+              class="img max-w-[18rem] rounded-md"
               src={project.picture}
               alt=""
             />
@@ -34,9 +35,7 @@ import { projects } from "../resume-en.json";
         <footer>
           <ul class="flex flex-wrap gap-3 mt-5">
             {project.highlights.map((highlight) => (
-              <span class="text-sm font-extralight bg-blue-100 border border rounded-xl text-gray-700 text-base font-semibold lowercase px-4 py-1">
-                {highlight}
-              </span>
+              <Highlight text={highlight}></Highlight>
             ))}
           </ul>
         </footer>

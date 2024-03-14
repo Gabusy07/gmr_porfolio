@@ -8,19 +8,36 @@ import NavLinkCustom from "./NavLinkCustom.astro";
   <div class="block md:flex items-center justify-between mx-2 md:mx-4">
     <div class="flex gap-x-5">
       <nav class="hidden sm:block sm:space-x-2 md:flex md:space-x-4">
-        <NavLinkCustom linkName="projectos" href="#projects">
+        <NavLinkCustom linkName="about" href="#about">
+          <Fragment slot="before">
+            <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          </Fragment>
+        </NavLinkCustom>
+        <NavLinkCustom linkName="languages" href="#languages">
           <Fragment slot="before">
             <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="experiencia" href="#experience">
+        <NavLinkCustom linkName="skills" href="#skills">
           <Fragment slot="before">
             <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="contactame" href="#contact-me">
+        <NavLinkCustom linkName="projects" href="#projects">
+          <Fragment slot="before">
+            <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          </Fragment>
+        </NavLinkCustom>
+
+        <NavLinkCustom linkName="experience" href="#experience">
+          <Fragment slot="before">
+            <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          </Fragment>
+        </NavLinkCustom>
+
+        <NavLinkCustom linkName="contact me" href="#contact-me">
           <Fragment slot="before">
             <img src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
           </Fragment>

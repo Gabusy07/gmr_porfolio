@@ -1,60 +1,14 @@
+---
+const { height, width } = Astro.props;
+---
+
 <svg
   viewBox="0 0 256 351"
-  width="256"
-  height="351"
+  width={width}
+  height={height}
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   preserveAspectRatio="xMidYMid"
-  ><defs
-    ><filter
-      x="-50%"
-      y="-50%"
-      width="200%"
-      height="200%"
-      filterUnits="objectBoundingBox"
-      id="b"
-      ><feGaussianBlur
-        stdDeviation="17.5"
-        in="SourceAlpha"
-        result="shadowBlurInner1"></feGaussianBlur><feOffset
-        in="shadowBlurInner1"
-        result="shadowOffsetInner1"></feOffset><feComposite
-        in="shadowOffsetInner1"
-        in2="SourceAlpha"
-        operator="arithmetic"
-        k2="-1"
-        k3="1"
-        result="shadowInnerInner1"></feComposite><feColorMatrix
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-        in="shadowInnerInner1"></feColorMatrix></filter
-    ><filter
-      x="-50%"
-      y="-50%"
-      width="200%"
-      height="200%"
-      filterUnits="objectBoundingBox"
-      id="d"
-      ><feGaussianBlur
-        stdDeviation="3.5"
-        in="SourceAlpha"
-        result="shadowBlurInner1"></feGaussianBlur><feOffset
-        dx="1"
-        dy="-9"
-        in="shadowBlurInner1"
-        result="shadowOffsetInner1"></feOffset><feComposite
-        in="shadowOffsetInner1"
-        in2="SourceAlpha"
-        operator="arithmetic"
-        k2="-1"
-        k3="1"
-        result="shadowInnerInner1"></feComposite><feColorMatrix
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"
-        in="shadowInnerInner1"></feColorMatrix></filter
-    ><path
-      d="m1.253 280.732 1.605-3.131 99.353-188.518-44.15-83.475C54.392-1.283 45.074.474 43.87 8.188L1.253 280.732Z"
-      id="a"></path><path
-      d="m134.417 148.974 32.039-32.812-32.039-61.007c-3.042-5.791-10.433-6.398-13.443-.59l-17.705 34.109-.53 1.744 31.678 58.556Z"
-      id="c"></path></defs
   ><path
     d="m0 282.998 2.123-2.972L102.527 89.512l.212-2.017L58.48 4.358C54.77-2.606 44.33-.845 43.114 6.951L0 282.998Z"
     fill="#FFC24A"></path><use
