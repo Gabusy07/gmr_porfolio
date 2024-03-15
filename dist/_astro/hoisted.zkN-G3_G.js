@@ -1,1 +1,0 @@
-import"./hoisted.8YFb3seA.js";document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("lenguage");e&&e.addEventListener("click",function(n){const t=n.target;if(t.classList.contains("dropdown-item")){const o=t.id;r(o)}})});async function r(e){try{return await fetch(`../src/resume-${e}.json`)}catch(n){console.error("Error al obtener el JSON:",n)}}
