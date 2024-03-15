@@ -5,5 +5,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  output: 'hybrid' // para cargas de paginas tras llamadas a servidor
+  site: 'https://gabusy07.github.io',
+  output: 'static'
 });
