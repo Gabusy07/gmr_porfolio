@@ -123,14 +123,14 @@
   "languages": [
     {
       "language": "English",
-      "flag": "/public/us-flag.png",
+      "flag": "/us-flag.png",
       "fluency": "intermediate level",
       "level": "B2"
     },
     {
       "language": "Spanish",
       "fluency": "Native speaker",
-      "flag": "/public/spain-flag.png",
+      "flag": "/spain-flag.png",
       "level": null
     }
   ],
