@@ -2,7 +2,7 @@
   "basics": {
     "name": "Gabriel Mayantz Remes",
     "label": "Software developer",
-    "image": "./public/img/photo.jpg",
+    "image": "/photo.jpg",
     "email": "mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso",
     "phone": "https://api.whatsapp.com/send?phone=5493816170091",
     "summary": "I am a FullStack Developer with a specialization in Frontend Angular, showcasing significant experience in the design and development of web applications. My focus lies in Angular, where I have solidified skills, effective collaboration in multidisciplinary teams, and rigorous adherence to quality standards for digital products. My goal is to contribute to project success through the application of best development practices and ongoing learning.",
@@ -123,20 +123,20 @@
   "languages": [
     {
       "language": "English",
-      "flag": "../public/icons/us-flag.png",
+      "flag": "/us-flag.png",
       "fluency": "intermediate level",
       "level": "B2"
     },
     {
       "language": "Spanish",
       "fluency": "Native speaker",
-      "flag": "../public/icons/spain-flag.png",
+      "flag": "/spain-flag.png",
       "level": null
     }
   ],
   "references": [
     {
-      "name": "Jane Doe",
+      "name": "",
       "reference": "Reference…"
     }
   ],
@@ -147,7 +147,7 @@
       "startDate": null,
       "endDate": null,
       "description": "Five-week project carried out with a large multidisciplinary team for noCountry. I took on the role in the backend team, performing tasks such as database design, class design, and providing technical solutions support to my team members. I played a prominent role in team organization and communication. I strengthened soft skills by pair programming.",
-      "picture": "../public/img/tripmate-logo.png",
+      "picture": "/tripmate-logo.png",
       "highlights": ["#2023", "NoCountry"],
       "url": "https://github.com/No-Country/s7-09-T-JavaReact"
     },
@@ -157,7 +157,7 @@
       "startDate": null,
       "endDate": null,
       "description": "Five-week project carried out in collaboration with a large multidisciplinary team. I took on the main role in the backend team, performing tasks such as application database design and providing technical solutions support to my team members. I played a prominent role in team organization as well as communication among other members from areas such as frontend and UX.",
-      "picture": "../public/img/sbt-icon.png",
+      "picture": "/sbt-icon.png",
       "highlights": ["#2024", "NoCountry"],
       "url": "https://github.com/No-Country/s13-11-m-java"
     },
@@ -177,7 +177,7 @@
       "startDate": null,
       "endDate": null,
       "description": "Project aiming to clone the main functionalities of a real application. It was a multidisciplinary project in which my role was as a product manager. I had to conduct a detailed assessment of the main functionalities and organize and coordinate teams, as well as implement agile work methodologies such as Scrum and the use of tools like Trello.",
-      "picture": "../public/img/xepelin-logo.png",
+      "picture": "/xepelin-logo.png",
       "highlights": ["#2023",  "NoCountry"],
       "url": "https://github.com/No-Country/s8-04-m-node-react-xepelin"
     },
@@ -187,7 +187,7 @@
       "startDate": null,
       "endDate": null,
       "description": "Five weeks project. One of my first multidisciplinary collaborative projects. My role was focused not only on the development of the code but also on strengthening the group, supporting task management, and analyzing project requirements.",
-      "picture": "../public/img/noCountry-logo.jpg",
+      "picture": "/noCountry-logo.jpg",
       "highlights": ["#2022", "NoCountry"],
       "url": "https://github.com/No-Country/C9-G34"
     }
