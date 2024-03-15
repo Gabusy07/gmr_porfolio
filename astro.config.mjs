@@ -5,5 +5,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  output: 'client' // para cargas de paginas tras llamadas a servidor
+  output: 'static' // para cargas de paginas tras llamadas a servidor
 });
