@@ -2,7 +2,7 @@
   "basics": {
     "name": "Gabriel Mayantz Remes",
     "label": "Software developer",
-    "image": "porfolio/public/img/photo.jpg",
+    "image": "gmr-porfolio/public/img/photo.jpg",
     "email": "mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso",
     "phone": "https://api.whatsapp.com/send?phone=5493816170091",
     "summary": "I am a FullStack Developer with a specialization in Frontend Angular, showcasing significant experience in the design and development of web applications. My focus lies in Angular, where I have solidified skills, effective collaboration in multidisciplinary teams, and rigorous adherence to quality standards for digital products. My goal is to contribute to project success through the application of best development practices and ongoing learning.",
@@ -177,7 +177,7 @@
       "startDate": null,
       "endDate": null,
       "description": "Project aiming to clone the main functionalities of a real application. It was a multidisciplinary project in which my role was as a product manager. I had to conduct a detailed assessment of the main functionalities and organize and coordinate teams, as well as implement agile work methodologies such as Scrum and the use of tools like Trello.",
-      "picture": "porfolio/public/img/xepelin-logo.png",
+      "picture": "gmr_porfolio/public/img/xepelin-logo.png",
       "highlights": ["#2023",  "NoCountry"],
       "url": "https://github.com/No-Country/s8-04-m-node-react-xepelin"
     },
