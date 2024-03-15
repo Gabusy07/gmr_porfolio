@@ -1,5 +1,8 @@
 ---
 import { work } from "../resume-en.json";
+import Highlight from "./Higlight.astro"
+
+const avlaWorkCase = ["techforb", "avla"]
 
 const EXPERIENCE = work;
 
@@ -25,9 +28,9 @@ EXPERIENCE.sort((a, b) => {
         "/" +
         (fullEndDate.getMonth() + 1).toString();
       return (
-        <li class="mb-3">
+        <li class="mb-12">
           <article>
-            <header class="flex text-lg justify-between items-start mb-2 font-bold text-gray-500">
+            <header class="flex text-lg justify-between items-start mb-3 font-bold text-gray-500">
               <div>
                 <h1 class="h1">{exp.position}</h1>
                 <h2 class="h2">{exp.name}</h2>
@@ -37,15 +40,23 @@ EXPERIENCE.sort((a, b) => {
               </time>
             </header>
 
-            <footer class="text-base text-black-700 text-pretty">
-              <summary>{exp.summary}</summary>
-              <small>
-                Ir a
-                <a class="text-blue-500 font-semibold" href={exp.url}>
-                 
-                  {exp.name}
-                </a>
-              </small>
+            <footer class="text-base text-black-700">
+              <summary class="mb-2">{exp.summary}</summary>
+              {exp.urls.map((url, index) => {
+                return (
+                  <small>
+                    Ir a
+                    <a class="text-blue-500 font-semibold mr-4" href={url} target="_blank">
+                      {exp.name.toLowerCase() === "techforb - avla"? avlaWorkCase[index] : exp.name}
+                    </a>
+                  </small>
+                );
+              })}
+              <ul class="flex flex-wrap gap-3 mt-5">
+            {exp.highlights.map((highlight) => (
+              <Highlight text={highlight}></Highlight>
+            ))}
+          </ul>
             </footer>
           </article>
         </li>
@@ -53,3 +64,9 @@ EXPERIENCE.sort((a, b) => {
     })
   }
 </ul>
+
+<style>
+  summary{
+    word-wrap: break-word;
+  }
+</style>

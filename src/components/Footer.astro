@@ -4,14 +4,13 @@ import  { basics } from "../resume-en.json";
 
 const { email, github, linkedIn, phone } = basics;
 const {id} = Astro.props;
-let leng = "es";
 ---
 
 
 
 <footer id={id} class="p-10 w-full h-[11rem] md:h-[45vh] mb-0 mt-5 flex flex-col md:flex-row items-end  bg-black">
   <div class="md:w-1/2">
-    <p class="md:text-2xl text-white mb-2 md:mb-0">{ leng === "es"? " ": "Contacto" }</p>
+    <p class="md:text-xl text-white mb-2 md:mb-0 font-bold">Contact me</p>
   </div>
     
   <div class="links_container flex flex-col md:flex-row md:space-x-5 md:justify-end md:items-center w-full">
@@ -80,26 +79,22 @@ let leng = "es";
     background-size: cover;
   }
 
-  /* Estilo para la clase p dentro del footer */
   footer p {
     color: white;
     font-size: 2rem;
   }
 
-  /* Estilo para la clase links_container dentro del footer */
   .links_container {
     display: flex;
     gap: 5px;
   }
 
-  /* Estilo para la clase a dentro del footer */
   footer a {
     width: 25px;
     fill: lightgray;
     transition: width, transform, filter 0.5s;
   }
 
-  /* Estilo para la clase .footer-link:hover dentro del footer */
   footer .footer-link:hover  {
     width: 35px;
     transition-delay: 0.1s;

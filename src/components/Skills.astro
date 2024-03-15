@@ -10,6 +10,17 @@ import SCSS from "../icons/SCSS.astro";
 import Typescript from "../icons/Typescript.astro";
 import Springboot from "../icons/Spring.astro";
 import Python from "../icons/Python.astro";
+import Postman from "../icons/Postman.astro";
+import Github from "../icons/Github.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Firebase from "../icons/Firebase.astro";
+import Mysql from "../icons/Mysql.astro";
+import Docker from "../icons/Docker.astro";
+import Hibernate from "../icons/Hibernate.astro";
+import Postgresql from "../icons/Postgress.astro";
+import MongoDB from "../icons/Mongo.astro";
+import Linux from "../icons/Linux.astro";
+import Jira from "../icons/Jira.astro";
 
 const ICONS: Record<string, any> = {
   Angular,
@@ -20,7 +31,17 @@ const ICONS: Record<string, any> = {
   SCSS,
   Typescript,
   Springboot,
-  Python
+  Python,
+  Github,
+  Postman,
+  Firebase,
+  Bootstrap,
+  Mysql,
+  Postgresql,
+  Docker,
+  MongoDB,
+  Linux,
+  Jira
 };
 ---
 
@@ -30,9 +51,8 @@ const ICONS: Record<string, any> = {
       const Icon = ICONS[skill.name] ? ICONS[skill.name] : EmptyIcon;
       return (
         <li>
-          <span class="flex items-center justify-center gap-x-3 bg-gray-100 border border rounded-xl text-blue-700 text-base font-semibold lowercase p-5 bg-opacity-50 min-w-[200px]">
-           
-              <Icon height="25" width="25" />
+          <span class="flex items-center justify-center gap-x-3 bg-gray-200 border border rounded-xl text-blue-700 text-base font-semibold lowercase p-5 bg-opacity-50 min-w-[200px]">
+            <Icon height="25" width="25" />
 
             <p>{skill.name}</p>
           </span>
@@ -41,3 +61,17 @@ const ICONS: Record<string, any> = {
     })
   }
 </ul>
+
+<style>
+  li span {
+    transition:
+      filter,
+      transform,
+      filter 0.5s;
+  }
+
+  li span:hover {
+    filter: brightness(150%);
+    transform: scale(1.1);
+  }
+</style>
