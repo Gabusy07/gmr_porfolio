@@ -5,7 +5,7 @@
     "image": "/photo.jpg",
     "email": "mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso",
     "phone": "https://api.whatsapp.com/send?phone=5493816170091",
-    "summary": "I am a FullStack Developer with a specialization in Frontend Angular, showcasing significant experience in the design and development of web applications. My focus lies in Angular, where I have solidified skills, effective collaboration in multidisciplinary teams, and rigorous adherence to quality standards for digital products. My goal is to contribute to project success through the application of best development practices and ongoing learning.",
+    "summary": "I am a FullStack Developer specializing in Frontend with Angular, boasting significant experience in designing and developing web applications. While I have honed my skills primarily in Angular, I am genuinely interested in transitioning to backend development using Java. My commitment lies in contributing to project success by implementing best development practices and continuous learning.",
     "linkedIn": "https://www.linkedin.com/in/gabriel-mayantz-remes/",
     "github": "https://github.com/Gabusy07",
     "location": {
@@ -71,6 +71,7 @@
     {
       "name": "Typescript"
     },
+    {"name": "Astro.js"},
     {
       "name": "Java"
     },
@@ -167,7 +168,7 @@
       "startDate": null,
       "endDate": null,
       "description": "Personal project in which, through the ChatGPT API, I can generate customized GPTs to analyze a database based on user-input instructions and execute actions accordingly.",
-      "picture": "",
+      "picture": null,
       "highlights": ["#2024"],
       "url": "https://github.com/Gabusy07/gpt-analyzer"
     },

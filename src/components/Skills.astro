@@ -20,6 +20,7 @@ import Postgresql from "../icons/Postgress.astro";
 import MongoDB from "../icons/Mongo.astro";
 import Linux from "../icons/Linux.astro";
 import Jira from "../icons/Jira.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
 
 const ICONS: Record<string, any> = {
   Angular,
@@ -40,14 +41,16 @@ const ICONS: Record<string, any> = {
   Docker,
   MongoDB,
   Linux,
-  Jira
+  Jira,
+  AstroIcon
 };
 ---
 
 <ul class="flex flex-wrap gap-3">
   {
     skills.map((skill) => {
-      const Icon = ICONS[skill.name] ? ICONS[skill.name] : EmptyIcon;
+      const skillName = skill.name === "Astro.js" ? "AstroIcon" : skill.name;
+      const Icon = ICONS[skillName] ? ICONS[skillName] : EmptyIcon;
       return (
         <li>
           <span class="flex items-center justify-center gap-x-3 bg-gray-200 border border rounded-xl text-blue-700 text-base font-semibold lowercase p-5 bg-opacity-50 min-w-[200px]">
