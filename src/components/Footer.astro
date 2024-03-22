@@ -1,8 +1,8 @@
 ---
 
-import  { basics } from "../resume-en.json";
+import {currentResume as resume } from "../globals.ts";
 
-const { email, github, linkedIn, phone } = basics;
+const { email, github, linkedIn, phone } = resume.basics;
 const {id} = Astro.props;
 ---
 

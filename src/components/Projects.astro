@@ -1,6 +1,8 @@
 ---
-import { projects } from "../resume-en.json";
+import {currentResume as resume } from "../globals.ts";
 import Highlight from "./Higlight.astro";
+
+const projects = resume.projects;
 ---
 
 <ul>
@@ -26,7 +28,7 @@ import Highlight from "./Higlight.astro";
         <div class="mb-3 text-thin">
           <figure class="mb-5">
             <img
-              class="img w-[40%] min-w-[200px] rounded-md"
+              class="imagen w-[40%] min-w-[200px] rounded-md"
               src={project.picture}
               alt=""
             />
@@ -58,7 +60,7 @@ import Highlight from "./Higlight.astro";
     height: 100%;
   }
 
-  .img {
+  .imagen {
     aspect-ratio: 2 / 2;
     object-fit: cover;
   }

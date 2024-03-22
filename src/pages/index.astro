@@ -76,34 +76,6 @@ import Skills from "../components/Skills.astro";
 </Layout>
 <Footer id="contact-me" />
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const languageDropdown: HTMLElement | null = document.getElementById("lenguage");
-  
-
-  if (languageDropdown) {
-    languageDropdown.addEventListener("click", function (event: MouseEvent) {
-      const targetElement = event.target as HTMLElement;
-      if (targetElement.classList.contains("dropdown-item")) {
-        const selectedLanguageId:string = targetElement.id;
-        changeLanguage(selectedLanguageId)
-      }
-    });
-  }
-});
-
-async function changeLanguage(lang: string) {
-    try {
-      const response: Response = await fetch(`../src/resume-${lang}.json`);
-      return response;
-
-    } catch (error) {
-      console.error("Error al obtener el JSON:", error);
-    }
-  }
-
-</script>
-
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap");
 

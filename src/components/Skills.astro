@@ -1,6 +1,6 @@
 ---
 import Angular from "../icons/Angular.astro";
-import { skills } from "../resume-en.json";
+import {currentResume as resume } from "../globals.ts";
 import Git from "../icons/Git.astro";
 import EmptyIcon from "../icons/EmptyIcon.astro";
 import CSS from "../icons/CSS.astro";
@@ -44,6 +44,8 @@ const ICONS: Record<string, any> = {
   Jira,
   AstroIcon
 };
+
+const skills = resume.skills;
 ---
 
 <ul class="flex flex-wrap gap-3">

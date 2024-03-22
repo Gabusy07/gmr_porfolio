@@ -7,10 +7,11 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const { currentLocale } = Astro;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={ currentLocale }>
   <head>
     <meta charset="UTF-16" />
     <meta name='gmr-info' content="gmr-info" />
@@ -19,6 +20,7 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/site-jupiter-logo.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
     <ViewTransitions />
   </head>
   <div class="w-full md:w-1/2 lg:w-1/2 xl:w-full mb-[10rem]">
@@ -28,7 +30,9 @@ const { title, description } = Astro.props;
     transition:animate={fade({ duration: "0.4s" })}
   >
     <slot />
+    <script src="../globals.ts"></script>
     <script src="../scripts/darklightmode-control.ts"></script>
+    <script src="../scripts/languageChange.ts" ></script>
   </body>
 
   <style is:global>

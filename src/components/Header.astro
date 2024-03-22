@@ -44,6 +44,10 @@ import NavLinkCustom from "./NavLinkCustom.astro";
         </NavLinkCustom>
       </nav>
 
+     
+    </div>
+
+    <div class="float-right mt-auto sm:mt-3 flex gap-x-2">
       <div id="lenguage" class="dropdown">
         
         <span class="dropdown-item"> Language</span>
@@ -53,9 +57,6 @@ import NavLinkCustom from "./NavLinkCustom.astro";
           <span id="en" class="dropdown-item">English</span>
         </div>
       </div>
-    </div>
-
-    <div class="float-right mt-auto sm:mt-3">
       <div class="container__switch">
         <label class="switch">
           <input type="checkbox" id="toggleButton" />
@@ -129,8 +130,8 @@ import NavLinkCustom from "./NavLinkCustom.astro";
 
   .dropdown {
     position: relative;
-    /*display: inline-block;*/
-    display: none;
+    display: inline-block;
+    /* display: none; */
   }
 
   .dropdown-content {

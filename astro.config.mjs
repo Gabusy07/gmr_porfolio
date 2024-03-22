@@ -7,4 +7,11 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'server',
   adapter: netlify(),
+  i18n : {
+    defaultLocale: 'en',
+    locales : ['es'],
+    routing : {
+      prefixDefaultLocale : false
+    }
+  }
 });

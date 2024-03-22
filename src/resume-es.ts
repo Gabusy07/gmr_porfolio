@@ -1,11 +1,11 @@
-{
+export const RESUME_ES= {
   "basics": {
     "name": "Gabriel Mayantz Remes",
     "label": "Software developer",
     "image": "/photo.jpg",
     "email": "mailto:gabm.remes@gmail.com?Subject=Interesado%20en%20el%20curso",
     "phone": "https://api.whatsapp.com/send?phone=5493816170091",
-    "summary": "I am a FullStack Developer specializing in Frontend with Angular, boasting significant experience in designing and developing web applications. While I have honed my skills primarily in Angular, I am genuinely interested in transitioning to backend development using Java. My commitment lies in contributing to project success by implementing best development practices and continuous learning.",
+    "summary": "Soy un Desarrollador FullStack especializado en Frontend con Angular, con una amplia experiencia en el diseño y desarrollo de aplicaciones web. Aunque he perfeccionado mis habilidades principalmente en Angular, estoy genuinamente interesado en hacer la transición al desarrollo backend utilizando Java. Mi compromiso radica en contribuir al éxito del proyecto implementando las mejores prácticas de desarrollo y aprendiendo continuamente.",
     "linkedIn": "https://www.linkedin.com/in/gabriel-mayantz-remes/",
     "github": "https://github.com/Gabusy07",
     "location": {

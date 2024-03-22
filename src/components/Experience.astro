@@ -1,10 +1,10 @@
 ---
-import { work } from "../resume-en.json";
+import {currentResume as resume } from "../globals.ts";
 import Highlight from "./Higlight.astro"
 
 const avlaWorkCase = ["techforb", "avla"]
 
-const EXPERIENCE = work;
+const EXPERIENCE = resume.work;
 
 EXPERIENCE.sort((a, b) => {
   const startDateA: any = new Date(a.startDate);
