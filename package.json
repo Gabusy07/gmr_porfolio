@@ -1,11 +1,13 @@
 {
   "name": "porfolio",
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
+    "build:dev": "NODE_ENV=development astro check && astro build",
+    "build:prod": "NODE_ENV=production astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
