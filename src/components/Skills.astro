@@ -46,14 +46,14 @@ const ICONS: Record<string, any> = {
 };
 ---
 
-<ul class="flex flex-wrap gap-3">
+<ul class="flex flex-wrap gap-3 items-center justify-center">
   {
     skills.map((skill) => {
       const skillName = skill.name === "Astro.js" ? "AstroIcon" : skill.name;
       const Icon = ICONS[skillName] ? ICONS[skillName] : EmptyIcon;
       return (
         <li>
-          <span class="flex items-center justify-center gap-x-3 bg-gray-200 border border rounded-xl text-blue-700 text-base font-semibold lowercase p-5 bg-opacity-50 min-w-[200px]">
+          <span class="flex items-center justify-center gap-x-3 bg-gray-200 border border rounded-xl text-blue-700 text-base font-semibold lowercase p-5 bg-opacity-50 min-w-[180px]">
             <Icon height="25" width="25" />
 
             <p>{skill.name}</p>
