@@ -6,8 +6,6 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "build:dev": "NODE_ENV=development astro check && astro build",
-    "build:prod": "NODE_ENV=production astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
