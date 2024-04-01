@@ -9,7 +9,7 @@ export const RESUME_ES= {
     "linkedIn": "https://www.linkedin.com/in/gabriel-mayantz-remes/",
     "github": "https://github.com/Gabusy07",
     "location": {
-      "region": "Tucuman",
+      "region": "",
       "country": "Argentina"
     }
   },
@@ -170,7 +170,7 @@ export const RESUME_ES= {
       "description": "Personal project in which, through the ChatGPT API, I can generate customized GPTs to analyze a database based on user-input instructions and execute actions accordingly.",
       "picture": null,
       "highlights": ["#2024"],
-      "url": "https://github.com/Gabusy07/gpt-analyzer"
+      "url": null
     },
     {
       "name": "Xepelin",
