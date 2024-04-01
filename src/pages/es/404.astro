@@ -1,9 +1,11 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import MainLayout from "../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import MainLayout from "../../layouts/Layout.astro";
 
 const lang = getLangFromUrl(Astro.url)
 const translate = useTranslations(lang)
+
+//TODO hacer traduccion
 ---
 
 

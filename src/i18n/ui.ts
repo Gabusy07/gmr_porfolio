@@ -14,7 +14,15 @@ export const ui: any = {
          'title.project':'Proyectos',
          'title.skill':'Conocimientos tecnicos',
          'title.education':'Educación',
-         'nav.contact':'Contactame' 
+         'nav.contact':'Contactame',
+         errorPages: {
+            '404Title': '',
+            '404Description': '',
+            '404Advice': '',
+            '404Redirect': '',
+
+
+         }
         
     },
     en : {
@@ -24,7 +32,14 @@ export const ui: any = {
          'title.project':'My projects',
          'title.skill':'My Skills',
          'title.education':'Education',
-         'nav.contact':'Contact me' 
+         'nav.contact':'Contact me',
+         errorPages: {
+            '404Title': 'The address you are looking for has not been found',
+            '404Advice': ' You can return to the beginning through the following link ',
+            '404Description': '',
+            '404Redirect': 'return to the start',
+
+         }
 
     }
 }

@@ -1,8 +1,10 @@
 ---
+import { getLangFromUrl } from "../i18n/utils";
 import {currentResume as resume } from "../globals.ts";
 import Highlight from "./Higlight.astro";
 
 const projects = resume.projects;
+const currentLang:any = getLangFromUrl(Astro.url) ?? '';
 ---
 
 <ul>
@@ -14,7 +16,7 @@ const projects = resume.projects;
             <a
               class="text-base text-green-700 font-semibold hover:text-lg hover:underline"
               title="See repository"
-              href={project.url  ?? '/inProgressProject/'}
+              href={project.url  ?? `/${currentLang}/inProgressProject/`}
               target="_blank"
             >
               <h3 class="inline text-lg">{project.name}</h3>
@@ -27,7 +29,7 @@ const projects = resume.projects;
           </header>
           <div class="mb-3 text-thin">
             <figure class="mb-5">
-              <a href={project.url ?? '/inProgressProject/'} target="_blank inline-link">
+              <a href={project.url ?? `/${currentLang}/inProgressProject/`} target="_blank inline-link">
                 <img
                   class="img w-[40%] min-w-[200px] rounded-md"
                   src={project.picture}
