@@ -9,7 +9,7 @@ export default defineConfig({
   adapter: netlify(),
   i18n : {
     defaultLocale: 'en',
-    locales : ['es'],
+    locales : ['en','es'],
     routing : {
       prefixDefaultLocale : false
     }

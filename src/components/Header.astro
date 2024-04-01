@@ -1,5 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import NavLinkCustom from "./NavLinkCustom.astro";
+
+
+const lang = getLangFromUrl(Astro.url)
+const translate = useTranslations(lang)
 ---
 
 <header
@@ -8,36 +13,36 @@ import NavLinkCustom from "./NavLinkCustom.astro";
   <div class="block md:flex items-end justify-between mx-2 md:mx-4">
     <div class="flex gap-x-5">
       <nav class="hidden sm:block sm:space-x-2 md:flex md:space-x-4">
-        <NavLinkCustom linkName="about" href="#about">
+        <NavLinkCustom linkName={translate('title.about')} href="#about">
           <Fragment slot="before">
             <img class="w-7" src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
-        <NavLinkCustom linkName="languages" href="#languages">
+        <NavLinkCustom linkName={translate('title.lang')} href="#languages">
           <Fragment slot="before">
             <img class="w-7" src="/language.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="skills" href="#skills">
+        <NavLinkCustom linkName={translate('title.skill')} href="#skills">
           <Fragment slot="before">
             <img class="w-7" src="/person_check.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="projects" href="#projects">
+        <NavLinkCustom linkName={translate('title.project')} href="#projects">
           <Fragment slot="before">
             <img class="w-7" src="/construction.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="experience" href="#experience">
+        <NavLinkCustom linkName={translate('title.experience')} href="#experience">
           <Fragment slot="before">
             <img class="w-7" src="/work.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="contact me" href="#contact-me">
+        <NavLinkCustom linkName={translate('nav.contact')} href="#contact-me">
           <Fragment slot="before">
             <img class="w-7" src="/contact.svg" alt="" />
           </Fragment>
