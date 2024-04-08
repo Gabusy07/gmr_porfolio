@@ -1,15 +1,19 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import MainLayout from "../../layouts/Layout.astro";
+
+const lang = getLangFromUrl(Astro.url)
+const translate = useTranslations(lang)
 ---
 
-  <MainLayout title="Not available" , description="Proyecto no disponible">
+  <MainLayout title="Not available" , description="">
     <div class="error_container border border-gray-300 rounded-xl">
       <div class="flex gap-x-4">
         <span>
           <img src="/sentiment_sad_FILL0_wght400_GRAD0_opsz24.svg" alt="">
         </span>
         <h3 class="text-left text-2xl">
-            El proyecto que buscas aún está en construcción.
+          El proyecto que buscas aún está en construcción.
         </h3>
         <span
           ><i>

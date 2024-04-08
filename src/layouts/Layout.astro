@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions, fade } from "astro:transitions";
 import Header from "../components/Header.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -33,10 +34,10 @@ const { currentLocale } = Astro;
     <slot />
     <script src="../globals.ts"></script>
     <script src="../scripts/darklightmode-control.ts"></script>
-    <script src="../scripts/languageChange.ts" ></script>
   </body>
 
   <style is:global>
+    @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap");
     body {
       padding: 3rem;
       margin: auto;
@@ -44,7 +45,7 @@ const { currentLocale } = Astro;
 
     
     html {
-      font-family: system-ui, sans-serif;
+      font-family: "Onest", sans-serif;
       background-size: 224px;
       scroll-behavior: smooth;
     }

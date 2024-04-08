@@ -1,6 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import NavLinkCustom from "./NavLinkCustom.astro";
+import { languages } from '../i18n/ui';
 
 
 const lang = getLangFromUrl(Astro.url)
@@ -55,13 +56,18 @@ const translate = useTranslations(lang)
     <div class="float-right mt-auto sm:mt-3 flex gap-x-2">
       <div id="lenguage" class="dropdown">
         
-        <span class="dropdown-item"> Language</span>
+        
 
-        <div class="dropdown-content">
-          <span id="es" class="dropdown-item">Spanish</span>
-          <span id="en" class="dropdown-item">English</span>
-        </div>
-      </div>
+    
+          <!-- <span id="en" class="dropdown-item">English</span> -->
+        
+      <ul>
+        {Object.entries(languages).map(([lang, label]) => (
+          <li class="dropdown-item">
+            <a class="dropdown-content" href={`/${lang}/`}>{label}</a>
+          </li>
+        ))}
+      </ul>
     </div>
 <!-- 
     <div class="float-right mt-auto sm:mt-3">

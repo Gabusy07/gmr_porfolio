@@ -1,4 +1,4 @@
-interface Basics {
+export interface Basics {
     name: string;
     label: string;
     image: string;
@@ -13,7 +13,7 @@ interface Basics {
     };
   }
   
-  interface WorkExperience {
+  export interface WorkExperience {
     name: string;
     position: string;
     urls: string[];
@@ -23,29 +23,29 @@ interface Basics {
     highlights: string[];
   }
   
-  interface Education {
+  export interface Education {
     institution: string;
     area: string;
     studyType: string;
   }
   
-  interface Skill {
+  export interface Skill {
     name: string;
   }
   
-  interface Language {
+  export interface Language {
     language: string;
     flag: string;
     fluency: string;
     level: string | null;
   }
   
-  interface Reference {
+  export interface Reference {
     name: string;
     reference: string;
   }
   
-  interface Project {
+  export interface Project {
     name: string;
     isActive: boolean;
     startDate: string | null;

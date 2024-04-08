@@ -1,10 +1,10 @@
 
-const LANGUAGES = {
+export const languages = {
     spanish : 'es',
     english : 'en'
 }
 
-export const defaultLang:string = LANGUAGES.english;
+export const defaultLang:string = languages.english;
 
 export const ui: any = {
     es: {
