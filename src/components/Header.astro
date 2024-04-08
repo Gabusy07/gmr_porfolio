@@ -1,11 +1,12 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
 import NavLinkCustom from "./NavLinkCustom.astro";
 import { languages } from '../i18n/ui';
 
 
 const lang = getLangFromUrl(Astro.url)
 const translate = useTranslations(lang)
+const translatePath = useTranslatedPath(lang);
 ---
 
 <header
@@ -56,18 +57,18 @@ const translate = useTranslations(lang)
     <div class="float-right mt-auto sm:mt-3 flex gap-x-2">
       <div id="lenguage" class="dropdown">
         
-        
+        <span class="dropdown-item"> Language</span>
 
-    
-          <!-- <span id="en" class="dropdown-item">English</span> -->
+     
+          <ul class="dropdown-content">
+            {Object.entries(languages).map(([label, lang]) => (
+              <li class="dropdown-item">
+                <a  href={translatePath('/', lang)}>{label}</a>
+              </li>
+            ))}
+          </ul>
         
-      <ul>
-        {Object.entries(languages).map(([lang, label]) => (
-          <li class="dropdown-item">
-            <a class="dropdown-content" href={`/${lang}/`}>{label}</a>
-          </li>
-        ))}
-      </ul>
+      </div>
     </div>
 <!-- 
     <div class="float-right mt-auto sm:mt-3">
@@ -153,7 +154,7 @@ const translate = useTranslations(lang)
     position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 5px;
     z-index: var(--z-priority);
     min-width: 33px;
   }
@@ -163,10 +164,10 @@ const translate = useTranslations(lang)
   }
 
   .dropdown-item {
-    padding: 8px;
+    padding: 3px 10px;
     cursor: pointer;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     transition: background-color 0.3s;
   }
 

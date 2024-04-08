@@ -4,7 +4,8 @@ export const languages = {
     english : 'en'
 }
 
-export const defaultLang:string = languages.english;
+export const defaultLang:string = 'en';
+export const showDefaultLang = false;
 
 export const ui: any = {
     es: {
@@ -14,7 +15,7 @@ export const ui: any = {
          'title.project':'Proyectos',
          'title.skill':'Conocimientos tecnicos',
          'title.education':'Educación',
-         'nav.contact':'Contactame',
+         'footer.text':'Contáctame',
          errorPages: {
             '404Title': '',
             '404Description': '',
@@ -32,13 +33,12 @@ export const ui: any = {
          'title.project':'My projects',
          'title.skill':'My Skills',
          'title.education':'Education',
-         'nav.contact':'Contact me',
+         'footer.text':'Contact me',
          errorPages: {
             '404Title': 'The address you are looking for has not been found',
             '404Advice': ' You can return to the beginning through the following link ',
             '404Description': '',
             '404Redirect': 'return to the start',
-
          }
 
     }
