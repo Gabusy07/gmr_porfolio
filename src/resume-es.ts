@@ -9,7 +9,7 @@ export const RESUME_ES= {
     "linkedIn": "https://www.linkedin.com/in/gabriel-mayantz-remes/",
     "github": "https://github.com/Gabusy07",
     "location": {
-      "region": "",
+      "region": null,
       "country": "Argentina"
     }
   },
