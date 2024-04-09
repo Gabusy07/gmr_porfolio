@@ -16,6 +16,7 @@ export const ui: any = {
          'title.skill':'Conocimientos tecnicos',
          'title.education':'Educación',
          'footer.text':'Contáctame',
+         'header.language': 'Idioma',
          
         '404Title': '',
         '404Description': '',
@@ -34,7 +35,8 @@ export const ui: any = {
         '404Title': 'The address you are looking for has not been found',
         '404Advice': ' You can return to the beginning through the following link ',
         '404Description': '',
-        '404Redirect': 'return to the start'
+        '404Redirect': 'return to the start',
+        'header.language':'Language'
 
     }
 }

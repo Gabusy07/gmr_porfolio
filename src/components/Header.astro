@@ -4,9 +4,10 @@ import NavLinkCustom from "./NavLinkCustom.astro";
 import { languages } from '../i18n/ui';
 
 
-const lang = getLangFromUrl(Astro.url)
-const translate = useTranslations(lang)
-const translatePath = useTranslatedPath(lang);
+
+const currentLang = getLangFromUrl(Astro.url)
+const translate = useTranslations(currentLang)
+const translatePath = useTranslatedPath(currentLang);
 ---
 
 <header
@@ -57,28 +58,30 @@ const translatePath = useTranslatedPath(lang);
     <div class="float-right mt-auto sm:mt-3 flex gap-x-2">
       <div id="lenguage" class="dropdown">
         
-        <span class="dropdown-item"> Language</span>
+        <span class="dropdown-item"> {translate('header.language')}</span>
 
-     
-          <ul class="dropdown-content">
-            {Object.entries(languages).map(([label, lang]) => (
-              <li class="dropdown-item">
-                <a  href={translatePath('/', lang)}>{label}</a>
-              </li>
-            ))}
+          <ul class="dropdown-content rounded-lg">
+            {Object.entries(languages)
+              .filter(([label, lang]) => lang !== currentLang)
+              .map(([label, lang]) => (
+                  <li class="dropdown-item rounded">
+                      <a href={translatePath('/', lang)}>{label}</a>
+                  </li>
+              ))
+          }
           </ul>
         
       </div>
     </div>
-<!-- 
-    <div class="float-right mt-auto sm:mt-3">
+
+    <!-- <div class="float-right mt-auto sm:mt-3">
       <div class="container__switch">
         <label class="switch">
           <input type="checkbox" id="toggleButton" />
           <span class="slider"></span>
         </label>
-      </div>-->
-    </div>
+      </div>
+    </div> -->
   </div>
 </header>
 
@@ -157,6 +160,8 @@ const translatePath = useTranslatedPath(lang);
     padding: 5px;
     z-index: var(--z-priority);
     min-width: 33px;
+    opacity: 0.75;
+    margin-top: 0.1rem;
   }
 
   .dropdown:hover .dropdown-content {
