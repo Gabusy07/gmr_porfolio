@@ -16,7 +16,7 @@ export const ui: any = {
          'title.skill':'Conocimientos tecnicos',
          'title.education':'Educación',
          'footer.text':'Contáctame',
-         errorPages: {
+         'errorPages': {
             '404Title': '',
             '404Description': '',
             '404Advice': '',
@@ -34,12 +34,10 @@ export const ui: any = {
          'title.skill':'My Skills',
          'title.education':'Education',
          'footer.text':'Contact me',
-         errorPages: {
-            '404Title': 'The address you are looking for has not been found',
-            '404Advice': ' You can return to the beginning through the following link ',
-            '404Description': '',
-            '404Redirect': 'return to the start',
-         }
+        '404Title': 'The address you are looking for has not been found',
+        '404Advice': ' You can return to the beginning through the following link ',
+        '404Description': '',
+        '404Redirect': 'return to the start'
 
     }
 }

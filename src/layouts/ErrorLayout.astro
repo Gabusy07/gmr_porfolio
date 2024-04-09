@@ -1,0 +1,67 @@
+---
+import { ViewTransitions, fade } from "astro:transitions";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const { currentLocale } = Astro;
+
+---
+
+<!doctype html>
+<html lang={ currentLocale }>
+  <head>
+    <meta charset="UTF-16" />
+    <meta name='error' content="error-page" />
+    <meta name='description' content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/site-jupiter-logo.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <ViewTransitions />
+  </head>
+  <body
+    transition:animate={fade({ duration: "0.4s" })}
+  >
+    <slot />
+    <script src="../globals.ts"></script>
+    <script src="../scripts/darklightmode-control.ts"></script>
+  </body>
+
+  <style is:global>
+    @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap");
+    body {
+      padding: 3rem;
+      margin: auto;
+    }
+
+    
+    html {
+      font-family: "Onest", sans-serif;
+      background-size: 224px;
+      scroll-behavior: smooth;
+    }
+
+    @media(prefers-reduce-motion: reduce){
+    html {
+      scroll-behavior: none;
+    }}
+
+
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
+</html>

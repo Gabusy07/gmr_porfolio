@@ -1,20 +1,20 @@
 ---
+import ErrorLayout from "../layouts/ErrorLayout.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import MainLayout from "../layouts/Layout.astro";
 
 const lang = getLangFromUrl(Astro.url)
 const translate = useTranslations(lang)
 ---
 
 
-  <MainLayout title="Error 404" , description=''>
+  <ErrorLayout title="Error 404" , description=''>
     <div class="error_container border border-gray-300 rounded-xl">
       <div class="flex gap-x-4">
         <span>
           <img src="/sentiment_sad_FILL0_wght400_GRAD0_opsz24.svg" alt="">
         </span>
         <h3 class="text-left text-2xl">
-          The address you are looking for has not been found
+          {translate('404Advice')}
         </h3>
         <span
           ><i>
@@ -28,7 +28,7 @@ const translate = useTranslations(lang)
         <a class="text-blue-700 text-base" href="./">return to the start</a>
       </div>
     </div>
-  </MainLayout>
+  </ErrorLayout >
 
 
   <style>
