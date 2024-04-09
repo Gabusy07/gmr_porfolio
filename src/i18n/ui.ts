@@ -16,14 +16,11 @@ export const ui: any = {
          'title.skill':'Conocimientos tecnicos',
          'title.education':'Educación',
          'footer.text':'Contáctame',
-         'errorPages': {
-            '404Title': '',
-            '404Description': '',
-            '404Advice': '',
-            '404Redirect': '',
-
-
-         }
+         
+        '404Title': '',
+        '404Description': '',
+        '404Advice': '',
+        '404Redirect': '',
         
     },
     en : {

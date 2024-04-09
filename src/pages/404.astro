@@ -7,14 +7,14 @@ const translate = useTranslations(lang)
 ---
 
 
-  <ErrorLayout title="Error 404" , description=''>
+  <ErrorLayout title="Error 404" , description={translate('404Description')}>
     <div class="error_container border border-gray-300 rounded-xl">
       <div class="flex gap-x-4">
         <span>
           <img src="/sentiment_sad_FILL0_wght400_GRAD0_opsz24.svg" alt="">
         </span>
         <h3 class="text-left text-2xl">
-          {translate('404Advice')}
+          {translate('404Title')}
         </h3>
         <span
           ><i>
@@ -23,9 +23,9 @@ const translate = useTranslations(lang)
         >
       </div>
       <div class="ml-9 mt-3 flex justify-start items-end gap-x-3">
-        <small> You can return to the beginning through the following link </small>
+        <small> {translate('404Advice')} </small>
         <img class="mt-1" src="/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-        <a class="text-blue-700 text-base" href="./">return to the start</a>
+        <a class="text-blue-700 text-base" href="./">{translate('404Redirect')}</a>
       </div>
     </div>
   </ErrorLayout >
@@ -35,5 +35,10 @@ const translate = useTranslations(lang)
     .error_container {
       padding: 10%;
       margin: 10% 5%;
+
+      img{
+        min-width: 18px;
+        min-height: 18px;
+      }
     }
   </style>
