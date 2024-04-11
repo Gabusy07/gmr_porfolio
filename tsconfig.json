@@ -3,14 +3,16 @@
   "compilerOptions": {
     "baseUrl": "",
     "paths": {
+      "@i18n/*": ["src/i18n/*"],
       "@resume": [
-        "./resume.json"
-
+        "./resume.json",
       ],
       "@/*": [
         "src/*"
 
-      ]
+      ],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"]
     }
   }
 }

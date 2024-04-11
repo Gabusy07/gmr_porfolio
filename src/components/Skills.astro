@@ -1,6 +1,5 @@
 ---
 import Angular from "../icons/Angular.astro";
-import { skills } from "../resume-en.json";
 import Git from "../icons/Git.astro";
 import EmptyIcon from "../icons/EmptyIcon.astro";
 import CSS from "../icons/CSS.astro";
@@ -21,6 +20,7 @@ import MongoDB from "../icons/Mongo.astro";
 import Linux from "../icons/Linux.astro";
 import Jira from "../icons/Jira.astro";
 import AstroIcon from "../icons/AstroIcon.astro";
+import { getLangFromUrl, getResume } from "../i18n/utils";
 
 const ICONS: Record<string, any> = {
   Angular,
@@ -44,6 +44,8 @@ const ICONS: Record<string, any> = {
   Jira,
   AstroIcon
 };
+const lang = getLangFromUrl(Astro.url)
+const skills = getResume(lang).skills;
 ---
 
 <ul class="flex flex-wrap gap-3 items-center justify-center">

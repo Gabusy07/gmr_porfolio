@@ -1,5 +1,10 @@
 ---
-import { education } from "../resume-en.json";
+import { getLangFromUrl, getResume } from "../i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url)
+
+const education = getResume(lang).education;
 ---
 
 <div class="font-normal text-pretty">

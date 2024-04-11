@@ -1,5 +1,9 @@
 ---
-import { languages } from "../resume-en.json";
+import { getLangFromUrl, getResume } from "../i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url)
+const languages = getResume(lang).languages;
 ---
 
 <div class="text-base font-normal text-pretty">
@@ -15,7 +19,7 @@ import { languages } from "../resume-en.json";
                 </div>
             
             <div class="flex">
-              <p>&nbsp;{level ? level : ""}</p>
+              <p>&nbsp;{level ?? level}</p>
               <p>&nbsp;{fluency}</p>
             </div>
           </li>

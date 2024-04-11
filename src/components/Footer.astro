@@ -1,16 +1,20 @@
 ---
 
-import  { basics } from "../resume-en.json";
+import { RESUME } from "../resume";
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
-const { email, github, linkedIn, phone } = basics;
+const { email, github, linkedIn, phone } = RESUME.en.basics;
 const {id} = Astro.props;
+
+const lang = getLangFromUrl(Astro.url)
+const translate = useTranslations(lang)
 ---
 
 
 
 <footer id={id} class="p-4 w-full h-[14rem] md:h-[45vh] mb-0 mt-5 flex flex-col md:flex-row items-end  bg-black">
   <div class="md:w-1/2">
-    <p class="md:text-xl text-white mb-2 md:mb-0 font-bold hidden md:block">Contact me</p>
+    <p class="md:text-xl text-white mb-2 md:mb-0 font-bold hidden md:block">{translate('footer.text')}</p>
   </div>
     
   <div class="mt-14 links_container flex flex-col md:flex-row md:space-x-5 md:justify-end md:items-center w-full">

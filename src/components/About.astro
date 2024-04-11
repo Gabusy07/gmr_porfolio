@@ -1,9 +1,11 @@
 ---
-import { basics } from "../resume-en.json";
+import { getLangFromUrl, getResume } from "../i18n/utils";
 
-const { summary } = basics;
+const lang = getLangFromUrl(Astro.url);
+
+const { basics } = getResume(lang);
 ---
 
 <div class="text-base font-normal text-pretty">
-    <p >{summary}</p>
+    <p >{basics?.summary}</p>
 </div>

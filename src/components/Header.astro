@@ -1,5 +1,13 @@
 ---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
 import NavLinkCustom from "./NavLinkCustom.astro";
+import { languages } from '../i18n/ui';
+
+
+
+const currentLang = getLangFromUrl(Astro.url)
+const translate = useTranslations(currentLang)
+const translatePath = useTranslatedPath(currentLang);
 ---
 
 <header
@@ -8,61 +16,72 @@ import NavLinkCustom from "./NavLinkCustom.astro";
   <div class="block md:flex items-end justify-between mx-2 md:mx-4">
     <div class="flex gap-x-5">
       <nav class="hidden sm:block sm:space-x-2 md:flex md:space-x-4">
-        <NavLinkCustom linkName="about" href="#about">
+        <NavLinkCustom linkName={translate('title.about')} href="#about">
           <Fragment slot="before">
             <img class="w-7" src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
-        <NavLinkCustom linkName="languages" href="#languages">
+        <NavLinkCustom linkName={translate('title.lang')} href="#languages">
           <Fragment slot="before">
             <img class="w-7" src="/language.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="skills" href="#skills">
+        <NavLinkCustom linkName={translate('title.skill')} href="#skills">
           <Fragment slot="before">
             <img class="w-7" src="/person_check.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="projects" href="#projects">
+        <NavLinkCustom linkName={translate('title.project')} href="#projects">
           <Fragment slot="before">
             <img class="w-7" src="/construction.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="experience" href="#experience">
+        <NavLinkCustom linkName={translate('title.experience')} href="#experience">
           <Fragment slot="before">
             <img class="w-7" src="/work.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName="contact me" href="#contact-me">
+        <NavLinkCustom linkName={translate('nav.contact')} href="#contact-me">
           <Fragment slot="before">
             <img class="w-7" src="/contact.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
       </nav>
 
+     
+    </div>
+
+    <div class="float-right mt-auto sm:mt-3 flex gap-x-2">
       <div id="lenguage" class="dropdown">
         
-        <span class="dropdown-item"> Language</span>
+        <span> {translate('header.language')}</span>
 
-        <div class="dropdown-content">
-          <span id="es" class="dropdown-item">Spanish</span>
-          <span id="en" class="dropdown-item">English</span>
-        </div>
+          <ul class="dropdown-content rounded-lg">
+            {Object.entries(languages)
+              .filter(([label, lang]) => lang !== currentLang)
+              .map(([label, lang]) => (
+                  <li class="dropdown-item rounded">
+                      <a href={translatePath('/', lang)}>{label}</a>
+                  </li>
+              ))
+          }
+          </ul>
+        
       </div>
     </div>
-<!-- 
-    <div class="float-right mt-auto sm:mt-3">
+
+    <!-- <div class="float-right mt-auto sm:mt-3">
       <div class="container__switch">
         <label class="switch">
           <input type="checkbox" id="toggleButton" />
           <span class="slider"></span>
         </label>
-      </div>-->
-    </div>
+      </div>
+    </div> -->
   </div>
 </header>
 
@@ -129,8 +148,9 @@ import NavLinkCustom from "./NavLinkCustom.astro";
 
   .dropdown {
     position: relative;
-    /*display: inline-block;*/
-    display: none;
+    display: inline-block;
+    transition-delay: 85s;
+    /* display: none; */
   }
 
   .dropdown-content {
@@ -138,9 +158,13 @@ import NavLinkCustom from "./NavLinkCustom.astro";
     position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 1px 10px;
     z-index: var(--z-priority);
-    min-width: 33px;
+    min-width: 45px;
+    opacity: 0.75;
+    transform: translateX(-50%);
+    left: 50%;
+    
   }
 
   .dropdown:hover .dropdown-content {
@@ -148,15 +172,16 @@ import NavLinkCustom from "./NavLinkCustom.astro";
   }
 
   .dropdown-item {
-    padding: 8px;
-    cursor: pointer;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    padding: 2px 10px;
+    cursor:context-menu;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     transition: background-color 0.3s;
   }
 
   .dropdown-item:hover {
-    background-color: #ddd;
+    background-color: #0870e7;
+    color: whitesmoke;
   }
 </style>
 

@@ -1,15 +1,17 @@
 ---
-import Footer from "../components/Footer.astro";
-import Layout from "../layouts/Layout.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Experience from "../components/Experience.astro";
-import Hero from "../components/Hero.astro";
-import Education from "../components/Education.astro";
-import Language from "../components/Languages.astro";
-import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
-import Skills from "../components/Skills.astro";
-import { useTranslations, getLangFromUrl } from "../i18n/utils";
+import About from "../../components/About.astro"
+import Education from "../../components/Education.astro"
+import Experience from "../../components/Experience.astro"
+import Footer from "../../components/Footer.astro"
+import Hero from "../../components/Hero.astro"
+import Projects from "../../components/Projects.astro"
+import SectionContainer from "../../components/SectionContainer.astro"
+import Skills from "../../components/Skills.astro"
+import Language from "../../components/Languages.astro"
+import { getLangFromUrl, useTranslations } from "../../i18n/utils"
+import Layout from "../../layouts/Layout.astro"
+
+
 
 
 const lang = getLangFromUrl(Astro.url)
@@ -19,7 +21,7 @@ const translate = useTranslations(lang)
 <Layout
   title="porfolio - web software developer fullstack"
   .
-  description="fullstack developer"
+  description="fullstack developer junior"
 >
   <main class="p-4 md:p-6 lg:p-8 xl:p-10">
 
@@ -30,26 +32,21 @@ const translate = useTranslations(lang)
     <SectionContainer id="skills" title={translate('title.skill')}, icon="/person_check.svg"><Skills /></SectionContainer>
     <SectionContainer id="projects" title={translate('title.project')} icon="/construction.svg"><Projects /></SectionContainer>
     <SectionContainer id="" title={translate('title.education')}, icon="/school.svg"><Education /></SectionContainer>
+    
+    
   </main>
 </Layout>
 <Footer id="contact-me" />
 
-<style is:global>
-
-
-
+<style>
+  
 
   :root {
     --color-violet: rgb(73 35 242);
-    --color-primary: #3c71ecad;
     --z-high-priority: 1000;
     --z-priority: 10;
     --z-base: 1;
     --z-lower: 0;
-  }
-
-  html {
-    font-family: "Onest", sans-serif;
   }
 
   body {

@@ -1,10 +1,11 @@
 ---
-import { work } from "../resume-en.json";
+import type { Work } from "@/interfaces/Resume";
 import Highlight from "./Higlight.astro"
+import { getLangFromUrl, getResume } from "../i18n/utils";
 
 const avlaWorkCase = ["techforb", "avla"]
-
-const EXPERIENCE = work;
+const lang = getLangFromUrl(Astro.url);
+const EXPERIENCE: Work[] = getResume(lang).work;
 
 EXPERIENCE.sort((a, b) => {
   const startDateA: any = new Date(a.startDate);
@@ -16,7 +17,7 @@ EXPERIENCE.sort((a, b) => {
 
 <ul>
   {
-    EXPERIENCE.map((exp) => {
+    EXPERIENCE.map((exp:any) => {
       const fullStartDate = new Date(exp.startDate);
       const fullEndDate = exp.endDate ? new Date(exp.endDate) : new Date();
       const startDate =

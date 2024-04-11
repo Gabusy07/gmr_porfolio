@@ -1,19 +1,8 @@
 ---
-import MainLayout from "../layouts/Layout.astro";
+import ErrorLayout from "../layouts/ErrorLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-16" />
-    <meta name='gmr-info"' content="error-404" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>not found</title>
-  </head>
-
-  <MainLayout title="Error 404" , description="">
+  <ErrorLayout title="Not available" , description="">
     <div class="error_container border border-gray-300 rounded-xl">
       <div class="flex gap-x-4">
         <span>
@@ -32,7 +21,7 @@ import MainLayout from "../layouts/Layout.astro";
         <small> Soon I will upload updates. </small>
       </div>
     </div>
-  </MainLayout>
+  </ErrorLayout>
 
 
   <style>
@@ -40,5 +29,8 @@ import MainLayout from "../layouts/Layout.astro";
       padding: 10%;
       margin: 10% 5%;
     }
+    img{
+        min-width: 18px;
+        min-height: 18px;
+      }
   </style>
-</html>

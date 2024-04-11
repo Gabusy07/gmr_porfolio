@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightModeClasses = ['bg-gray-100', 'text-black'];
 
   toggleButton.addEventListener("click", () => {
+
+    console.log('ftgcgfyhgvyCFVHVGJ')
     if (darkModeClasses.every(cls => body?.classList?.contains(cls))) {
       setTimeout(()=>{
         lightModeClasses.forEach(cls => body?.classList?.add(cls));
