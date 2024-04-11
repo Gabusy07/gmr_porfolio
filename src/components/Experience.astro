@@ -7,7 +7,7 @@ const avlaWorkCase = ["techforb", "avla"]
 const lang = getLangFromUrl(Astro.url);
 const EXPERIENCE: Work[] = getResume(lang).work;
 
-EXPERIENCE.sort((a, b) => {
+EXPERIENCE.sort((a:any, b:any) => {
   const startDateA: any = new Date(a.startDate);
   const startDateB: any = new Date(b.startDate);
 
@@ -43,7 +43,7 @@ EXPERIENCE.sort((a, b) => {
 
             <footer class="text-base text-black-700">
               <summary class="mb-2">{exp.summary}</summary>
-              {exp.urls.map((url, index) => {
+              {exp.urls.map((url:string, index:any) => {
                 return (
                   <small>
                     Go to
@@ -54,7 +54,7 @@ EXPERIENCE.sort((a, b) => {
                 );
               })}
               <ul class="flex flex-wrap gap-3 mt-5">
-            {exp.highlights.map((highlight) => (
+            {exp.highlights.map((highlight:any) => (
               <Highlight text={highlight}></Highlight>
             ))}
           </ul>
