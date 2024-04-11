@@ -1,9 +1,9 @@
 ---
 
-import {currentResume as resume } from "../globals.ts";
+import { RESUME } from "../resume";
 import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
-const { email, github, linkedIn, phone } = resume.basics;
+const { email, github, linkedIn, phone } = RESUME.en.basics;
 const {id} = Astro.props;
 
 const lang = getLangFromUrl(Astro.url)

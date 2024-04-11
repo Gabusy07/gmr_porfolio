@@ -11,10 +11,11 @@ export const ui: any = {
     es: {
          'title.about':'Sobre mi',
          'title.lang':'Idiomas',
-         'title.experience':'My experiencia',
+         'title.experience':'Mi experiencia',
          'title.project':'Proyectos',
          'title.skill':'Conocimientos tecnicos',
          'title.education':'Educación',
+         'nav.contact': 'contacto',
          'footer.text':'Contáctame',
          'header.language': 'Idioma',
          
@@ -31,6 +32,7 @@ export const ui: any = {
          'title.project':'My projects',
          'title.skill':'My Skills',
          'title.education':'Education',
+         'nav.contact': 'contact',
          'footer.text':'Contact me',
         '404Title': 'The address you are looking for has not been found',
         '404Advice': ' You can return to the beginning through the following link ',

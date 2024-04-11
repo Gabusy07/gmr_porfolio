@@ -1,6 +1,9 @@
 ---
-import {currentResume as resume } from "../globals.ts";
-const languages = resume.languages;
+import { getLangFromUrl, getResume } from "../i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url)
+const languages = getResume(lang).languages;
 ---
 
 <div class="text-base font-normal text-pretty">

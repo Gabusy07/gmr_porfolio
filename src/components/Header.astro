@@ -58,7 +58,7 @@ const translatePath = useTranslatedPath(currentLang);
     <div class="float-right mt-auto sm:mt-3 flex gap-x-2">
       <div id="lenguage" class="dropdown">
         
-        <span class="dropdown-item"> {translate('header.language')}</span>
+        <span> {translate('header.language')}</span>
 
           <ul class="dropdown-content rounded-lg">
             {Object.entries(languages)
@@ -149,6 +149,7 @@ const translatePath = useTranslatedPath(currentLang);
   .dropdown {
     position: relative;
     display: inline-block;
+    transition-delay: 85s;
     /* display: none; */
   }
 
@@ -157,11 +158,13 @@ const translatePath = useTranslatedPath(currentLang);
     position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 5px;
+    padding: 1px 10px;
     z-index: var(--z-priority);
-    min-width: 33px;
+    min-width: 45px;
     opacity: 0.75;
-    margin-top: 0.1rem;
+    transform: translateX(-50%);
+    left: 50%;
+    
   }
 
   .dropdown:hover .dropdown-content {
@@ -169,15 +172,16 @@ const translatePath = useTranslatedPath(currentLang);
   }
 
   .dropdown-item {
-    padding: 3px 10px;
-    cursor: pointer;
+    padding: 2px 10px;
+    cursor:context-menu;
     margin-top: 1rem;
     margin-bottom: 1rem;
     transition: background-color 0.3s;
   }
 
   .dropdown-item:hover {
-    background-color: #ddd;
+    background-color: #0870e7;
+    color: whitesmoke;
   }
 </style>
 

@@ -25,24 +25,23 @@ const translate = useTranslations(lang)
 
     <SectionContainer id="hero" title=""><Hero /></SectionContainer>
     <SectionContainer id="about" title={translate('title.about')}><About /></SectionContainer>
-    <SectionContainer id="languages" title={translate('title.about')}><Language /></SectionContainer>
-    <SectionContainer id="experience" title={translate('title.about')}, icon="/work.svg"><Experience /></SectionContainer>
-    <SectionContainer id="skills" title={translate('title.about')}, icon="/person_check.svg"><Skills /></SectionContainer>
-    <SectionContainer id="projects" title={translate('title.about')} icon="/construction.svg"><Projects /></SectionContainer>
-    <SectionContainer id="" title={translate('title.about')}, icon="/school.svg"><Education /></SectionContainer>
-    
-    
+    <SectionContainer id="languages" title={translate('title.lang')}><Language /></SectionContainer>
+    <SectionContainer id="experience" title={translate('title.experience')}, icon="/work.svg"><Experience /></SectionContainer>
+    <SectionContainer id="skills" title={translate('title.skill')}, icon="/person_check.svg"><Skills /></SectionContainer>
+    <SectionContainer id="projects" title={translate('title.project')} icon="/construction.svg"><Projects /></SectionContainer>
+    <SectionContainer id="" title={translate('title.education')}, icon="/school.svg"><Education /></SectionContainer>
   </main>
 </Layout>
 <Footer id="contact-me" />
 
-<style>
+<style is:global>
 
 
 
 
   :root {
     --color-violet: rgb(73 35 242);
+    --color-primary: #3c71ecad;
     --z-high-priority: 1000;
     --z-priority: 10;
     --z-base: 1;

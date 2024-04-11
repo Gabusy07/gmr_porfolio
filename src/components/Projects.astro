@@ -1,9 +1,10 @@
 ---
-import { getLangFromUrl } from "../i18n/utils";
-import {currentResume as resume } from "../globals.ts";
+import { getLangFromUrl, getResume } from "../i18n/utils";
 import Highlight from "./Higlight.astro";
 
-const projects = resume.projects;
+const lang = getLangFromUrl(Astro.url)
+
+const projects = getResume(lang).projects;
 const currentLang:any = getLangFromUrl(Astro.url) ?? '';
 ---
 
