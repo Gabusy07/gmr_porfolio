@@ -29,11 +29,13 @@ const { currentLocale } = Astro;
       <Header />
     </div>
     <slot />
+  </body>
+  </html>
     <!-- <script src="../scripts/darklightmode-control.ts"></script> -->
 
-    <style is:global>
+    <style>
 
-      body {
+body {
         min-height: 100vh;
         color-scheme: light dark;
         margin: 0;
@@ -58,6 +60,7 @@ const { currentLocale } = Astro;
           scroll-behavior: none;
         }
       }
+     
 
       code {
         font-family:
@@ -71,5 +74,4 @@ const { currentLocale } = Astro;
           monospace;
       }
     </style>
-  </body>
-</html>
+
