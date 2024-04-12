@@ -13,7 +13,6 @@ import Layout from "../../layouts/Layout.astro"
 
 
 
-
 const lang = getLangFromUrl(Astro.url)
 const translate = useTranslations(lang)
 ---
@@ -21,7 +20,7 @@ const translate = useTranslations(lang)
 <Layout
   title="porfolio - web software developer fullstack"
   .
-  description="fullstack developer junior"
+  description="fullstack developer"
 >
   <main class="p-4 md:p-6 lg:p-8 xl:p-10">
 
@@ -32,21 +31,26 @@ const translate = useTranslations(lang)
     <SectionContainer id="skills" title={translate('title.skill')}, icon="/person_check.svg"><Skills /></SectionContainer>
     <SectionContainer id="projects" title={translate('title.project')} icon="/construction.svg"><Projects /></SectionContainer>
     <SectionContainer id="" title={translate('title.education')}, icon="/school.svg"><Education /></SectionContainer>
-    
-    
   </main>
 </Layout>
 <Footer id="contact-me" />
 
-<style>
-  
+<style is:global>
+
+
+
 
   :root {
     --color-violet: rgb(73 35 242);
+    --color-primary: #3c71ecad;
     --z-high-priority: 1000;
     --z-priority: 10;
     --z-base: 1;
     --z-lower: 0;
+  }
+
+  html {
+    font-family: "Onest", sans-serif;
   }
 
   body {
