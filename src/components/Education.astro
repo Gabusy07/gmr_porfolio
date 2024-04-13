@@ -13,7 +13,7 @@ const education = getResume(lang).education;
       return (
         <article>
               <h2 class="text-lg mb-3"> {` ${edu.studyType} in ${edu.area}`}</h2>
-              <h4 class="text-base ">{`at ${edu.institution}`}</h4>
+              <h4 class="text-base ">{`${lang === 'en'? 'at' : 'en'} ${edu.institution}`}</h4>
         </article>
       );
     })

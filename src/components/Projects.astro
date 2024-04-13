@@ -1,11 +1,13 @@
 ---
-import { getLangFromUrl, getResume } from "../i18n/utils";
+import { getLangFromUrl, getResume, useTranslations } from "../i18n/utils";
 import Highlight from "./Higlight.astro";
 
 const lang = getLangFromUrl(Astro.url)
 
 const projects = getResume(lang).projects;
 const currentLang:any = getLangFromUrl(Astro.url) ?? '';
+
+const translate = useTranslations(lang)
 ---
 
 <ul>
@@ -24,7 +26,7 @@ const currentLang:any = getLangFromUrl(Astro.url) ?? '';
             </a>
             {project.isActive && (
               <span class="ml-3 text-blue-600 text-xs font-semibold">
-                &bull; In progress
+                &bull; {translate('project.inProgress')}
               </span>
             )}
           </header>

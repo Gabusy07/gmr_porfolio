@@ -30,43 +30,7 @@ const { currentLocale } = Astro;
     </div>
     <slot />
   </body><!-- <script src="../scripts/darklightmode-control.ts"></script> -->
-  <style is:global>
-    body {
-      min-height: 100vh;
-      color-scheme: light dark;
-      margin: 0;
-      padding: 0;
-    }
-    main {
-      margin: auto;
-      padding: 1rem;
-      max-width: calc(100% - 2rem);
-      font-size: 20px;
-      line-height: 1.6;
-    }
-
-    html {
-      font-family: "Onest", sans-serif;
-      background-size: 224px;
-      scroll-behavior: smooth;
-    }
-
-    @media (prefers-reduce-motion: reduce) {
-      html {
-        scroll-behavior: none;
-      }
-    }
-
-    code {
-      font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
-    }
+  <style>
+   
   </style>
 </html>
