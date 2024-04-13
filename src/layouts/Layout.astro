@@ -29,49 +29,45 @@ const { currentLocale } = Astro;
       <Header />
     </div>
     <slot />
-  </body>
-  </html>
-    <!-- <script src="../scripts/darklightmode-control.ts"></script> -->
+  </body><!-- <script src="../scripts/darklightmode-control.ts"></script> -->
+  <style is:global>
+    @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap");
+    body {
+      min-height: 100vh;
+      color-scheme: light dark;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      margin: auto;
+      padding: 1rem;
+      max-width: calc(100% - 2rem);
+      font-size: 20px;
+      line-height: 1.6;
+    }
 
-    <style>
+    html {
+      font-family: "Onest", sans-serif;
+      background-size: 224px;
+      scroll-behavior: smooth;
+    }
 
-body {
-        min-height: 100vh;
-        color-scheme: light dark;
-        margin: 0;
-        padding: 0;
-      }
-      main {
-        margin: auto;
-        padding: 1rem;
-        max-width: calc(100% - 2rem);
-        font-size: 20px;
-        line-height: 1.6;
-      }
-
+    @media (prefers-reduce-motion: reduce) {
       html {
-        font-family: "Onest", sans-serif;
-        background-size: 224px;
-        scroll-behavior: smooth;
+        scroll-behavior: none;
       }
+    }
 
-      @media (prefers-reduce-motion: reduce) {
-        html {
-          scroll-behavior: none;
-        }
-      }
-     
-
-      code {
-        font-family:
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
-      }
-    </style>
-
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
+</html>
