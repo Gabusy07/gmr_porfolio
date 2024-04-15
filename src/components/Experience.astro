@@ -1,11 +1,12 @@
 ---
 import type { Work } from "@/interfaces/Resume";
 import Highlight from "./Higlight.astro"
-import { getLangFromUrl, getResume } from "../i18n/utils";
+import { getLangFromUrl, getResume, useTranslations } from "../i18n/utils";
 
 const avlaWorkCase = ["techforb", "avla"]
 const lang = getLangFromUrl(Astro.url);
 const EXPERIENCE: Work[] = getResume(lang).work;
+const translate = useTranslations(lang)
 
 EXPERIENCE.sort((a:any, b:any) => {
   const startDateA: any = new Date(a.startDate);
@@ -46,7 +47,7 @@ EXPERIENCE.sort((a:any, b:any) => {
               {exp.urls.map((url:string, index:any) => {
                 return (
                   <small>
-                    Go to
+                    {translate('go-site')}
                     <a class="text-blue-500 font-semibold mr-4" href={url} target="_blank">
                       {exp.name.toLowerCase() === "techforb - avla"? avlaWorkCase[index] : exp.name}
                     </a>

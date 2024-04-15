@@ -23,7 +23,8 @@ export const ui: any = {
         '404Description': '',
         '404Advice': '',
         '404Redirect': '',
-        'project.inProgress':'En progreso'
+        'project.inProgress':'En progreso',
+        'go-site': 'ir a'
         
     },
     en : {
@@ -40,7 +41,8 @@ export const ui: any = {
         '404Description': '',
         '404Redirect': 'return to the start',
         'header.language':'Language',
-        'project.inProgress':'In progress'
+        'project.inProgress':'In progress',
+        'go-site': 'go to'
 
     }
 }
