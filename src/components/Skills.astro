@@ -58,7 +58,7 @@ const skills = getResume(lang).skills;
           <span class="flex items-center justify-center gap-x-3 bg-gray-200 border border rounded-xl p-5 bg-opacity-50 min-w-[180px]">
             <Icon height="25" width="25" />
 
-            <p class="text-blue-700 lowercase text-base text-bold opacity-90">{skill.name}</p>
+            <p class="text-blue-700 lowercase text-base opacity-90">{skill.name}</p>
           </span>
         </li>
       );
@@ -77,5 +77,8 @@ const skills = getResume(lang).skills;
   li span:hover {
     filter: brightness(150%);
     transform: scale(1.1);
+  }
+  p{
+    font-weight: 700;
   }
 </style>
