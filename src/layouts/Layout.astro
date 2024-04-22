@@ -19,6 +19,12 @@ const { currentLocale } = Astro;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/site-jupiter-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -29,10 +35,8 @@ const { currentLocale } = Astro;
       <Header />
     </div>
     <slot />
-  </body><!-- <script src="../scripts/darklightmode-control.ts"></script> -->
-  <style is:global>
-    @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300&display=swap");
-    :root {
+    <style is:global>
+      :root {
         --color-violet: rgb(73 35 242);
         --color-primary: #3c71ecad;
         --z-high-priority: 1000;
@@ -40,38 +44,50 @@ const { currentLocale } = Astro;
         --z-base: 1;
         --z-lower: 0;
       }
-      
+
       body {
-      min-height: 100vh;
-      color-scheme: light dark;
-      margin: 0;
-      padding: 0;
-    }
-   
-
-    html {
-      font-family: "Onest", sans-serif;
-      background-size: 224px;
-      scroll-behavior: smooth;
-    }
-
-    @media (prefers-reduce-motion: reduce) {
-      html {
-        scroll-behavior: none;
+        min-height: 100vh;
+        color-scheme: light dark;
+        margin: 0;
+        padding: 0;
       }
-    }
 
-    code {
-      font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
-    }
-   
-  </style>
+      html {
+        font-family: "Onest", sans-serif;
+        background-size: 224px;
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduce-motion: reduce) {
+        html {
+          scroll-behavior: none;
+        }
+      }
+
+
+      summary{
+        font-weight: 300;
+        opacity: 0.85;
+
+      }
+
+      p{
+        font-weight: 300;
+        opacity: 0.85;
+
+      }
+
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
+  </body><!-- <script src="../scripts/darklightmode-control.ts"></script> -->
 </html>

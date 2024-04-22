@@ -19,6 +19,12 @@ const { currentLocale } = Astro;
     <meta name='description' content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/site-jupiter-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     
@@ -33,7 +39,7 @@ const { currentLocale } = Astro;
 
   <style>
     body {
-      padding: 3rem;
+      padding: 2rem;
       margin: auto;
     }
 
@@ -43,6 +49,12 @@ const { currentLocale } = Astro;
       background-size: 224px;
       scroll-behavior: smooth;
     }
+
+    p{
+        font-weight: 300;
+        opacity: 0.85;
+
+      }
 
     @media(prefers-reduce-motion: reduce){
     html {
