@@ -1,16 +1,15 @@
 ---
-import About from "../../components/About.astro"
-import Education from "../../components/Education.astro"
-import Experience from "../../components/Experience.astro"
-import Footer from "../../components/Footer.astro"
-import Hero from "../../components/Hero.astro"
-import Projects from "../../components/Projects.astro"
-import SectionContainer from "../../components/SectionContainer.astro"
-import Skills from "../../components/Skills.astro"
-import Language from "../../components/Languages.astro"
-import { getLangFromUrl, useTranslations } from "../../i18n/utils"
-import Layout from "../../layouts/Layout.astro"
-
+import Footer from "../../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Experience from "../../components/Experience.astro";
+import Hero from "../../components/Hero.astro";
+import Education from "../../components/Education.astro";
+import Language from "../../components/Languages.astro";
+import About from "../../components/About.astro";
+import Projects from "../../components/Projects.astro";
+import Skills from "../../components/Skills.astro";
+import { useTranslations, getLangFromUrl } from "../../i18n/utils";
 
 
 const lang = getLangFromUrl(Astro.url)
@@ -35,7 +34,7 @@ const translate = useTranslations(lang)
 </Layout>
 <Footer id="contact-me" />
 
-<style >
+<style>
    main {
       margin: auto;
       padding: 1rem;
@@ -43,6 +42,5 @@ const translate = useTranslations(lang)
       font-size: 20px;
       line-height: 1.6;
     }
-
-  
+ 
 </style>

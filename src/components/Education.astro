@@ -12,7 +12,7 @@ const education = getResume(lang).education;
     education.map((edu) => {
       return (
         <article>
-              <h2 class="text-lg mb-3"> {` ${edu.studyType} in ${edu.area}`}</h2>
+              <h2 class="text-lg mb-3"> {` ${edu.studyType} ${lang === 'en'? 'in' : 'en'} ${edu.area}`}</h2>
               <h4 class="text-base ">{`${lang === 'en'? 'at' : 'en'} ${edu.institution}`}</h4>
         </article>
       );

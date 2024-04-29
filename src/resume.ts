@@ -20,7 +20,7 @@ export const RESUME = {
         "position": "Backend developer",
         "urls": ["https://www.nocountry.tech/"],
         "startDate": "2024-02-02",
-        "endDate": null,
+        "endDate": "2024-05-02",
         "summary": "Participated in selections conducted by NoCountry in the development of server side web applications, using Java and Spring Boot as development technologies and working under agile work methods as like scrum.",
         "highlights": ["Java developer", "data base design", "pair programming"]
       },
@@ -155,7 +155,7 @@ export const RESUME = {
       },
       {
         "name": "Smart Businees Tracker",
-        "isActive": true,
+        "isActive": false,
         "startDate": null,
         "endDate": null,
         "description": "Project carried out in collaboration with a large multidisciplinary team. I took on the main role in the backend team, performing tasks such as application database design and providing technical solutions support to my team members. I played a prominent role in team organization as well as communication among other members from areas such as frontend and UX.",
