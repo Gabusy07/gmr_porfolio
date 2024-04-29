@@ -1,76 +1,82 @@
 ---
-import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
 import NavLinkCustom from "./NavLinkCustom.astro";
-import { languages } from '../i18n/ui';
+import { languages } from "../i18n/ui";
 
-
-
-const currentLang = getLangFromUrl(Astro.url)
-const translate = useTranslations(currentLang)
+const currentLang = getLangFromUrl(Astro.url);
+const translate = useTranslations(currentLang);
 const translatePath = useTranslatedPath(currentLang);
 ---
 
 <header
-  class="border border-gray-100 rounded bg-opacity-75 transparent  text-black w-full bg-gray-200 p-4 lg:p-5"
+  class="border border-gray-100 rounded bg-opacity-75 transparent text-black w-full bg-gray-200 p-4 lg:p-5"
 >
   <div class="block md:flex items-end justify-between mx-2 md:mx-4">
     <div class="flex gap-x-5">
       <nav class="hidden md:block md:space-x-2 lg:flex lg:space-x-4">
-        <NavLinkCustom linkName={translate('title.about')} href="#about">
+        <NavLinkCustom linkName={translate("title.about")} href="#about">
           <Fragment slot="before">
-            <img class="w-7" src="/info_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+            <img
+              class="w-7"
+              src="/info_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
           </Fragment>
         </NavLinkCustom>
-        <NavLinkCustom linkName={translate('title.lang')} href="#languages">
+        <NavLinkCustom linkName={translate("title.lang")} href="#languages">
           <Fragment slot="before">
             <img class="w-7" src="/language.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName={translate('title.skill')} href="#skills">
+        <NavLinkCustom linkName={translate("title.skill")} href="#skills">
           <Fragment slot="before">
             <img class="w-7" src="/person_check.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName={translate('title.project')} href="#projects">
+        <NavLinkCustom linkName={translate("title.project")} href="#projects">
           <Fragment slot="before">
             <img class="w-7" src="/construction.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName={translate('title.experience')} href="#experience">
+        <NavLinkCustom
+          linkName={translate("title.experience")}
+          href="#experience"
+        >
           <Fragment slot="before">
             <img class="w-7" src="/work.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
 
-        <NavLinkCustom linkName={translate('nav.contact')} href="#contact-me">
+        <NavLinkCustom linkName={translate("nav.contact")} href="#contact-me">
           <Fragment slot="before">
             <img class="w-7" src="/contact.svg" alt="" />
           </Fragment>
         </NavLinkCustom>
       </nav>
-
-     
     </div>
 
     <div class="float-right mt-auto sm:mt-3 flex gap-x-10">
       <div id="lenguage" class="dropdown">
-        
-        <span> {translate('header.language')}</span>
+        <span> {translate("header.language")}</span>
 
-          <ul class="dropdown-content rounded-lg">
-            {Object.entries(languages)
+        <ul class="dropdown-content rounded-lg">
+          {
+            Object.entries(languages)
               .filter(([label, lang]) => lang !== currentLang)
               .map(([label, lang]) => (
-                  <li class="dropdown-item rounded">
-                      <a href={translatePath('/', lang)}>{label}</a>
-                  </li>
+                <li class="dropdown-item rounded">
+                  <a href={translatePath("/", lang)}>{label}</a>
+                </li>
               ))
           }
-          </ul>
-        
+        </ul>
       </div>
       <div class="container__switch">
         <label class="switch">
@@ -79,15 +85,10 @@ const translatePath = useTranslatedPath(currentLang);
         </label>
       </div>
     </div>
-    </div>
-
-    <div class="float-right mt-auto sm:mt-3">
-     
   </div>
- 
+
+  <div class="float-right mt-auto sm:mt-3"></div>
 </header>
-
-
 
 <style>
   header {
@@ -167,7 +168,6 @@ const translatePath = useTranslatedPath(currentLang);
     opacity: 0.75;
     transform: translateX(-50%);
     left: 50%;
-    
   }
 
   .dropdown:hover .dropdown-content {
@@ -176,7 +176,7 @@ const translatePath = useTranslatedPath(currentLang);
 
   .dropdown-item {
     padding: 2px 10px;
-    cursor:context-menu;
+    cursor: context-menu;
     margin-top: 1rem;
     margin-bottom: 1rem;
     transition: background-color 0.3s;
@@ -186,6 +186,4 @@ const translatePath = useTranslatedPath(currentLang);
     background-color: #0870e7;
     color: whitesmoke;
   }
-
 </style>
-

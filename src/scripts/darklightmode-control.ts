@@ -31,23 +31,20 @@ function setThemeStyleUsingLocalStorageSavedTheme() {
   const lightModeClasses = ["bg-gray-100", "text-black"];
 
   if (localStorage.theme === "dark") {
-    const toggleButton = document.getElementById("toggleButton") as HTMLInputElement;
+    const toggleButton = document.getElementById(
+      "toggleButton"
+    ) as HTMLInputElement;
     if (toggleButton) {
       toggleButton.checked = true;
     }
     setTimeout(() => {
       darkModeClasses.forEach((cls) => body?.classList?.add(cls));
       lightModeClasses.forEach((cls) => body?.classList?.remove(cls));
-     
-      
     }, 50);
   } else {
     setTimeout(() => {
       lightModeClasses.forEach((cls) => body?.classList?.add(cls));
       darkModeClasses.forEach((cls) => body?.classList?.remove(cls));
-      
-      
-      
     }, 50);
   }
 }
