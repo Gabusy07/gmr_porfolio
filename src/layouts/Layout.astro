@@ -27,67 +27,68 @@ const { currentLocale } = Astro;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script src="../scripts/darklightmode-control.ts"></script>
 
-    <ViewTransitions />
+    <ViewTransitions/>
   </head>
-  <body transition:animate={fade({ duration: "0.4s" })}>
+  <body transition:animate={fade({ duration: "0.45s" })}  >
     <div class="w-full mb-[10rem]">
       <Header />
     </div>
     <slot />
-    <style is:global>
-      :root {
-        --color-violet: rgb(73 35 242);
-        --color-primary: #3c71ecad;
-        --z-high-priority: 1000;
-        --z-priority: 10;
-        --z-base: 1;
-        --z-lower: 0;
-      }
-
-      body {
-        min-height: 100vh;
-        color-scheme: light dark;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        font-family: "Onest", sans-serif;
-        background-size: 224px;
-        scroll-behavior: smooth;
-      }
-
-      @media (prefers-reduce-motion: reduce) {
-        html {
-          scroll-behavior: none;
-        }
-      }
-
-
-      summary{
-        font-weight: 300;
-        opacity: 0.85;
-
-      }
-
-      p{
-        font-weight: 300;
-        opacity: 0.85;
-
-      }
-
-      code {
-        font-family:
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
-      }
-    </style>
-  </body><!-- <script src="../scripts/darklightmode-control.ts"></script> -->
+  </body>
 </html>
+<style is:global>
+  :root {
+    --color-violet: rgb(73 35 242);
+    --color-primary: #3c71ecad;
+    --z-high-priority: 1000;
+    --z-priority: 10;
+    --z-base: 1;
+    --z-lower: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: "Onest", sans-serif;
+    background-size: 224px;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduce-motion: reduce) {
+    html {
+      scroll-behavior: none;
+    }
+  }
+
+
+  summary{
+    font-weight: 300;
+    opacity: 0.85;
+
+  }
+
+  p{
+    font-weight: 300;
+    opacity: 0.85;
+
+  }
+
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
