@@ -10,13 +10,13 @@ function changeThemeStyle() {
     setTimeout(() => {
       lightModeClasses.forEach((cls) => body?.classList?.add(cls));
       darkModeClasses.forEach((cls) => body?.classList?.remove(cls));
-      setThemeInLocalStorage("dark");
+      setThemeInLocalStorage("light");
     }, 50);
   } else {
     setTimeout(() => {
       darkModeClasses.forEach((cls) => body?.classList?.add(cls));
       lightModeClasses.forEach((cls) => body?.classList?.remove(cls));
-      setThemeInLocalStorage("light");
+      setThemeInLocalStorage("dark");
     }, 50);
   }
 }
@@ -31,19 +31,23 @@ function setThemeStyleUsingLocalStorageSavedTheme() {
   const lightModeClasses = ["bg-gray-100", "text-black"];
 
   if (localStorage.theme === "dark") {
-    setTimeout(() => {
-      lightModeClasses.forEach((cls) => body?.classList?.add(cls));
-      darkModeClasses.forEach((cls) => body?.classList?.remove(cls));
-      const toggleButton = document.getElementById("toggleButton") as HTMLInputElement;
-      if (toggleButton) {
-        alert('llega')
-        toggleButton.checked = true;
-      }
-    }, 50);
-  } else {
+    const toggleButton = document.getElementById("toggleButton") as HTMLInputElement;
+    if (toggleButton) {
+      toggleButton.checked = true;
+    }
     setTimeout(() => {
       darkModeClasses.forEach((cls) => body?.classList?.add(cls));
       lightModeClasses.forEach((cls) => body?.classList?.remove(cls));
+     
+      
+    }, 50);
+  } else {
+    setTimeout(() => {
+      lightModeClasses.forEach((cls) => body?.classList?.add(cls));
+      darkModeClasses.forEach((cls) => body?.classList?.remove(cls));
+      
+      
+      
     }, 50);
   }
 }
