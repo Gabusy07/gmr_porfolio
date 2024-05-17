@@ -18,6 +18,7 @@ export const ui: any = {
          'nav.contact': 'contacto',
          'footer.text':'Contáctame',
          'header.language': 'Idioma',
+         'experience.defaultFinishDateMessage':'hasta hoy',
          
         '404Title': '',
         '404Description': '',
@@ -36,6 +37,7 @@ export const ui: any = {
          'title.education':'Education',
          'nav.contact': 'contact',
          'footer.text':'Contact me',
+         'experience.defaultFinishDateMessage':'until now',
         '404Title': 'The address you are looking for has not been found',
         '404Advice': ' You can return to the beginning through the following link ',
         '404Description': '',
