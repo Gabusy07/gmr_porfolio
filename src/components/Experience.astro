@@ -38,7 +38,7 @@ EXPERIENCE.sort((a:any, b:any) => {
                 <h2 class="h2">{exp.name}</h2>
               </div>
               <time class="text-base font-bold text-gray-400">
-                {startDate} - {exp.endDate ? endDate : "until now"}
+                {startDate} - {exp.endDate ? endDate : translate('experience.defaultFinishDateMessage')}
               </time>
             </header>
 
