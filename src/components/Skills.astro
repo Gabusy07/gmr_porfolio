@@ -20,6 +20,7 @@ import MongoDB from "../icons/Mongo.astro";
 import Linux from "../icons/Linux.astro";
 import Jira from "../icons/Jira.astro";
 import AstroIcon from "../icons/AstroIcon.astro";
+import Go from "../icons/Go.astro";
 import { getLangFromUrl, getResume } from "../i18n/utils";
 
 const ICONS: Record<string, any> = {
@@ -42,7 +43,8 @@ const ICONS: Record<string, any> = {
   MongoDB,
   Linux,
   Jira,
-  AstroIcon
+  AstroIcon,
+  Go
 };
 const lang = getLangFromUrl(Astro.url)
 const skills = getResume(lang).skills;
@@ -50,7 +52,15 @@ const skills = getResume(lang).skills;
 
 <ul class="flex flex-wrap gap-3 items-center justify-center">
   {
-    skills.map((skill) => {
+    skills.sort((a, b) => {
+    if (a.name < b.name) {
+        return -1;
+    } else if (a.name > b.name) {
+        return 1;
+    } else {
+        return 0;
+    }
+}).map((skill) => {
       const skillName = skill.name === "Astro.js" ? "AstroIcon" : skill.name;
       const Icon = ICONS[skillName] ? ICONS[skillName] : EmptyIcon;
       return (
