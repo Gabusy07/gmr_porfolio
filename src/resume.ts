@@ -17,6 +17,16 @@ export const RESUME = {
     },
     work: [
       {
+        name: "Factor IT",
+        position: "Fullstack developer",
+        urls: [""],
+        startDate: "2024-06-02",
+        endDate: null,
+        summary:
+          "",
+        highlights: ["Java developer", "data base design", "pair programming"],
+      },
+      {
         name: "NoCountry",
         position: "Backend developer",
         urls: ["https://www.nocountry.tech/"],
@@ -238,6 +248,16 @@ export const RESUME = {
       },
     },
     work: [
+      {
+        name: "Factor IT",
+        position: "Fullstack developer",
+        urls: [""],
+        startDate: "2024-06-02",
+        endDate: null,
+        summary:
+          "",
+        highlights: ["Java developer", "data base design", "pair programming"],
+      },
       {
         name: "NoCountry",
         position: "Backend developer",
