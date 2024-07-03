@@ -17,6 +17,16 @@ export const RESUME = {
     },
     work: [
       {
+        name: "Factor IT",
+        position: "Fullstack developer",
+        urls: ["https://www.factorit.com.ar/"],
+        startDate: "2024-06-20",
+        endDate: null,
+        summary:
+          "Main task as a backend java developer",
+        highlights: ["Java developer", "data base design", "pair programming"],
+      },
+      {
         name: "NoCountry",
         position: "Backend developer",
         urls: ["https://www.nocountry.tech/"],
@@ -239,6 +249,16 @@ export const RESUME = {
     },
     work: [
       {
+        name: "Factor IT",
+        position: "Fullstack developer",
+        urls: ["https://www.factorit.com.ar/"],
+        startDate: "2024-06-20",
+        endDate: null,
+        summary:
+          "Principal tarea como desarrollador backend java",
+        highlights: ["Java developer"],
+      },
+      {
         name: "NoCountry",
         position: "Backend developer",
         urls: ["https://www.nocountry.tech/"],
@@ -347,7 +367,7 @@ export const RESUME = {
       },
       {
         name: "Smart Businees Tracker",
-        isActive: true,
+        isActive: false,
         startDate: null,
         endDate: null,
         description:
